@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System – Valtioneuvosto ja ministeriöt v2.4.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wdth,wght@62.5,700;100,300;100,400;100,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Siirry sisältöön</a>
+
+<div class="doc-layout">
+
+  <!-- DOC HEADER -->
+  <header class="doc-header">
+    <div style="max-width:var(--max-width);margin:0 auto;">
+      <div class="meta-badges">
+        <span class="badge badge-yellow">Luonnos</span>
+      </div>
+      <h1>Valtioneuvoston ja sen ministeriöiden visuaalinen ilme verkkoviestinnässä</h1>
+      <p class="description">Ohjeisto valtioneuvoston ja ministeriöiden visuaalisen ilmeen käyttöön digitaalisissa palveluissa. Ohjeisto määrittelee reunaehdot, joita suunnittelijat, kehittäjät ja tekoälyagentit noudattavat yhtenäisen ja saavutettavan lopputuloksen varmistamiseksi.</p>
+      <div class="meta-row">
+        <div class="meta-item"><strong>v2.4.1</strong> · Päivitetty 2026-05-26</div>
+        <div class="meta-item"><strong>Tekijä:</strong> Valtioneuvoston kanslia / Viestintäosasto</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="doc-body">
+
+  <!-- ===== SIDEBAR ===== -->
+  <nav class="sidebar" id="doc-sidebar" aria-label="Dokumentin navigaatio">
+    <ul class="sidebar-nav">
+      <li class="nav-group">Perusteet</li>
+      <li><a href="#s1" class="is-active">1. Strategiset tavoitteet ja äänensävy</a></li>
+      <li><a href="#s2">2. Saavutettavuus</a></li>
+      <li class="nav-group">Värit ja ministeriöt</li>
+      <li><a href="#s3-colors">3. Design-tokenit</a></li>
+      <li><a href="#s3-colors-sub">3.1 Väripaletti</a></li>
+      <li><a href="#s3-ministry">3.1.4 Ministeriövärit</a></li>
+      <li><a href="#s3-error-colors">3.1.5 Virhe- ja varoitusvärit</a></li>
+      <li class="nav-group">Typografia</li>
+      <li><a href="#s3-type">3.2 Typografia ja tekstihierarkia</a></li>
+      <li><a href="#s3-spacing">3.3 Välistykset</a></li>
+      <li class="nav-group">Muut tokenit</li>
+      <li><a href="#s3-radius">3.4 Pyöristys</a></li>
+      <li><a href="#s3-states">3.5 Interaktiivisten elementtien tilat</a></li>
+      <li><a href="#s3-logos">3.6 Tunnukset</a></li>
+      <li class="nav-group">Asettelu</li>
+      <li><a href="#s4">4. Grid-järjestelmä</a></li>
+      <li class="nav-group">Rakenne ja navigaatio</li>
+      <li><a href="#s5">5. Header ja Footer</a></li>
+      <li><a href="#s6">6. Navigaatio</a></li>
+      <li><a href="#s7">7. Painikkeet ja linkit</a></li>
+      <li class="nav-group">Sisältökomponentit</li>
+      <li><a href="#s8">8. Lomake-elementit</a></li>
+      <li><a href="#s9">9. Nostot</a></li>
+      <li><a href="#s10">10. Listaukset</a></li>
+      <li class="nav-group">Vuorovaikutus ja media</li>
+      <li><a href="#s11">11. Accordion ja taulukot</a></li>
+      <li><a href="#s12">12. Ikonografia</a></li>
+      <li><a href="#s13">13. Valokuvat ja media</a></li>
+      <li class="nav-group">Palaute, haku ja erikoistilanteet</li>
+      <li><a href="#s14">14. Huomionauhat ja virhesivut</a></li>
+      <li><a href="#s15">15. Hakukenttä</a></li>
+      <li><a href="#s16">16. Evästebanneri</a></li>
+      <li><a href="#s17">17. Tulostustyyli</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main-content" id="main-content">
+
+    <!-- ===== OSIO 1 ===== -->
+    <section class="section" id="s1">
+      <h2 class="section-title"><span class="section-number">1.</span> Strategiset tavoitteet ja äänensävy</h2>
+
+      <p>Kaikki toteutukset noudattavat seuraavia periaatteita:</p>
+
+      <ul class="styled">
+        <li><strong>Saavutettavuus:</strong> Sivustot noudattavat digipalvelulaissa asetettuja WCAG 2.1 A- ja AA-tason kriteerejä. Toteutuksessa huomioidaan myös tulevan WCAG 2.2 -version vaatimat täsmennykset.</li>
+        <li><strong>Luotettavuus:</strong> Sivustojen ilme on virallinen, rauhallinen ja asiantunteva, mutta myös tyylikäs ja viimeistelty. Visuaalisten efektien käyttö on harkittua ja hienovaraista.</li>
+        <li><strong>Yhtenäisyys:</strong> Käyttökokemus on yhtenäinen kaikkien ministeriöiden sivustoilla.</li>
+        <li><strong>Käyttäjäkeskeisyys:</strong> Sisällön löydettävyys ja käytettävyys suunnitellaan käyttäjän tarpeiden mukaan.</li>
+      </ul>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Äänensävy ja käyttöliittymätekstit</h3>
+        <ul class="styled">
+          <li><strong>Virallisuus ja selkeys:</strong> Kieli on asiallista, neutraalia ja helposti ymmärrettävää. Se on sujuvaa mutta virallista — ei sinuttelevaa.</li>
+          <li><strong>Läpinäkyvyys:</strong> Painikkeet, linkit ja vastaavat kertovat selkeästi, mitä niitä klikkaamalla tapahtuu. Käyttäjää ei harhauteta.</li>
+          <li><strong>Virheilmoitukset:</strong> Virheilmoitukset ovat syyllistämättömiä ja ratkaisukeskeisiä. Niissä kerrotaan, mikä meni vikaan ja annetaan ohje tilanteen korjaamiseksi. Virheilmoituksissa ei anneta ymmärtää, että käyttäjä on tehnyt virheen, vaan kerrotaan, mitä pitää tehdä toisin.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== OSIO 2 ===== -->
+    <section class="section" id="s2">
+      <h2 class="section-title"><span class="section-number">2.</span> Saavutettavuus</h2>
+
+      <p>Nämä vaatimukset koskevat kaikkia komponentteja ja toteutuksia. Komponenttikohtaiset tarkennukset löytyvät kunkin komponentin kuvauksesta.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Focus-indikaattori ja näppäimistökäyttö</h3>
+        <p>Kaikki toiminnot ovat käytettävissä näppäimistöllä. Fokus ei saa kadota tai hypätä arvaamattomasti sivulla liikuttaessa. Focus-indikaattorin tulee olla vähintään <strong>3 px paksu</strong> ja sen kontrastisuhteen taustaväriin nähden vähintään <strong>3:1</strong>. Fokusvärinä käytetään tummennettua oranssia <code>#C76F00</code>.</p>
+
+        <div class="subsection--wireframe">
+          <div style="display:flex;justify-content:center;gap:var(--space-l);align-items:flex-end">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:var(--space-xs)">
+              <button class="demo-btn btn-primary">Painike</button>
+              <span style="font-size:0.8rem;color:var(--color-text-secondary)">Painike ilman focusta</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:var(--space-xs)">
+              <span class="focus-indicator-example">Painike</span>
+              <span style="font-size:0.8rem;color:var(--color-text-secondary)">Painike focuksella</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:var(--space-xs)">
+              <a href="#" class="link-body" onclick="return false">Tekstilinkki</a>
+              <span style="font-size:0.8rem;color:var(--color-text-secondary)">Linkki ilman focusta</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:var(--space-xs)">
+              <a href="#" class="link-body focus-link-example" onclick="return false">Tekstilinkki</a>
+              <span style="font-size:0.8rem;color:var(--color-text-secondary)">Linkki focuksella</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Kosketuskohteiden minimikoko</h3>
+        <p>Kaikkien kosketuskohteiden minimikoko on <strong>44×44 px</strong>. Vaatimus koskee esim. painikkeita, linkkejä, lomake-elementtejä ja navigaatioelementtejä.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Väri ja kontrasti</h3>
+        <p>Tekstin ja taustan kontrastisuhde on vähintään <strong>4.5:1</strong>. Väri ei yksin riitä tiedon välittämiseen — jokainen värikoodattu tieto ilmaistaan myös tekstillä tai ikonilla.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Animaatiot</h3>
+        <p>Animaatioiden enimmäiskesto on <code>0.2s ease-in-out</code>. <code>prefers-reduced-motion</code>-asetusta kunnioitetaan: jos asetus on päällä, animaatioita ei näytetä.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Sivun rakenne ja landmarks</h3>
+        <ul class="styled">
+          <li>Sivun eri alueet merkitään HTML5-elementeillä: <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code> jne.</li>
+          <li>Jokaisella navigaatioelementillä on yksilöllinen <code>aria-label</code>.</li>
+          <li>Sivun alussa on visuaalisesti piilotettu <strong>skip link</strong> ("Siirry sisältöön"), joka näkyy fokusoitaessa.</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Ruudunlukijatekstit (sr-only)</h3>
+        <p><code>sr-only</code> piilottaa elementin visuaalisesti mutta näyttää sen avustavalle teknologialle. Saavutettavuusteksteissä ei käytetä <code>display: none</code> tai <code>visibility: hidden</code> — ne piilottavat elementin myös ruudunlukijoilta.</p>
+      </div>
+
+    </section>
+
+    <!-- ===== OSIO 3: VÄRIT ===== -->
+    <section class="section" id="s3-colors">
+      <h2 class="section-title"><span class="section-number">3.</span> Design-tokenit</h2>
+
+      <div class="subsection" id="s3-colors-sub">
+        <h3 class="subsection-title">Väripaletti</h3>
+        <p>Väripaletti jakautuu kolmeen ryhmään: päävärit, tukivärit ja taustavärit.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Päävärit</h3>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#365ABD"></div>
+            <div class="swatch-info"><span class="swatch-name">Valtioneuvoston sininen</span><span class="swatch-hex">#365ABD</span></div>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#002F6C"></div>
+            <div class="swatch-info"><span class="swatch-name">Tumma sininen</span><span class="swatch-hex">#002F6C</span></div>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#00A9E0"></div>
+            <div class="swatch-info"><span class="swatch-name">Vaalea sininen</span><span class="swatch-hex">#00A9E0</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Tukivärit</h3>
+        <p style="margin-bottom:var(--space-s)">Pienimuotoinen rooli toiminnallisuuksien osoittamisessa, infografiikassa ja huomionauhan vakavuustasoissa.</p>
+        <div class="color-grid">
+          <div class="color-swatch"><div class="swatch-color" style="background:#00713A"></div><div class="swatch-info"><span class="swatch-name">Tumma vihreä</span><span class="swatch-hex">#00713A</span></div></div>
+          <div class="color-swatch"><div class="swatch-color" style="background:#76B82A"></div><div class="swatch-info"><span class="swatch-name">Vaalea vihreä</span><span class="swatch-hex">#76B82A</span></div></div>
+          <div class="color-swatch"><div class="swatch-color" style="background:#00A79F"></div><div class="swatch-info"><span class="swatch-name">Turkoosi</span><span class="swatch-hex">#00A79F</span></div></div>
+          <div class="color-swatch"><div class="swatch-color" style="background:#2699D6"></div><div class="swatch-info"><span class="swatch-name">Sininen</span><span class="swatch-hex">#2699D6</span></div></div>
+          <div class="color-swatch"><div class="swatch-color" style="background:#8C4091"></div><div class="swatch-info"><span class="swatch-name">Purppura</span><span class="swatch-hex">#8C4091</span></div></div>
+          <div class="color-swatch"><div class="swatch-color" style="background:#D90066"></div><div class="swatch-info"><span class="swatch-name">Pinkki</span><span class="swatch-hex">#D90066</span></div></div>
+          <div class="color-swatch"><div class="swatch-color" style="background:#E63312"></div><div class="swatch-info"><span class="swatch-name">Punainen</span><span class="swatch-hex">#E63312</span></div></div>
+          <div class="color-swatch"><div class="swatch-color" style="background:#F18700"></div><div class="swatch-info"><span class="swatch-name">Oranssi</span><span class="swatch-hex">#F18700</span></div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Taustavärit</h3>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#5D626A"></div>
+            <div class="swatch-info"><span class="swatch-name">Viileä harmaa</span><span class="swatch-hex">#5D626A</span></div>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#9B9183"></div>
+            <div class="swatch-info"><span class="swatch-name">Lämmin harmaa</span><span class="swatch-hex">#9B9183</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MINISTERIÖVÄRIT ===== -->
+    <section class="section" id="s3-ministry">
+
+      <div class="subsection">
+        <h3 class="subsection-title">Ministeriöiden dynaamiset värit</h3>
+        <p>Värisävyt alla ovat havainnollistavia ja ylläpidetään käsin tämän dokumentin <code>design.md</code>-lähteen mukaisina. Tuotantototeutuksessa väriteemat ajetaan aina dynaamisina CSS-muuttujina (ks. design.md §17), ei kiinteinä heksoina.</p>
+
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Valtioneuvoston kanslia</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#002F6C"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#002F6C</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E8EEF7"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E8EEF7</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F7FC"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F7FC</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001B42"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#001B42</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#000A1A"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#000A1A</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Ulkoministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#003399"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#003399</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E6EBFA"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E6EBFA</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F6FD"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F6FD</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001F5A"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#001F5A</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#000D2B"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#000D2B</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Oikeusministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#00305A"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#00305A</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E6EDF4"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E6EDF4</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F6FA"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F6FA</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001B36"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#001B36</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#000A1A"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#000A1A</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Sisäministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#8B1A1A"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#8B1A1A</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F5E8E8"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#F5E8E8</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#FBF3F3"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#FBF3F3</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#5A1010"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#5A1010</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#2A0808"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#2A0808</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Puolustusministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#1B3A6B"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#1B3A6B</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E8EDF5"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E8EDF5</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F6FA"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F6FA</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#0F2447"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#0F2447</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#050E1A"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#050E1A</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Valtiovarainministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#003580"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#003580</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E8F0FA"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E8F0FA</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F7FD"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F7FD</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#002350"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#002350</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#000E28"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#000E28</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Opetus- ja kulttuuriministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#005EB8"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#005EB8</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E8F0FA"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E8F0FA</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F7FD"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F7FD</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#003D7A"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#003D7A</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001A39"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#001A39</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Maa- ja metsätalousministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#006B3C"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#006B3C</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E6F2EC"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E6F2EC</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F9F6"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F9F6</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#004A26"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#004A26</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001F11"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#001F11</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Liikenne- ja viestintäministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#0072C6"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#0072C6</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E6F1FB"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E6F1FB</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F8FD"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F8FD</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#004A85"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#004A85</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001D3A"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#001D3A</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Työ- ja elinkeinoministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#0058A0"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#0058A0</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E6EFF8"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E6EFF8</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F7FC"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F7FC</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#003A68"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#003A68</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001A33"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#001A33</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Sosiaali- ja terveysministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#006B4D"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#006B4D</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E6F2EE"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E6F2EE</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F9F6"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F9F6</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#004A35"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#004A35</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#002019"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#002019</span></div></div>
+          </div>
+        </div>
+
+        <div class="ministry-block">
+          <h4 class="ministry-block-title">Ympäristöministeriö</h4>
+          <div class="color-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#00703C"></div><div class="swatch-info"><span class="swatch-name">Pääväri</span><span class="swatch-hex">#00703C</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#E6F2EC"></div><div class="swatch-info"><span class="swatch-name">Light</span><span class="swatch-hex">#E6F2EC</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#F3F9F6"></div><div class="swatch-info"><span class="swatch-name">Lighter</span><span class="swatch-hex">#F3F9F6</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#004A26"></div><div class="swatch-info"><span class="swatch-name">Dark</span><span class="swatch-hex">#004A26</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#001F11"></div><div class="swatch-info"><span class="swatch-name">Darker</span><span class="swatch-hex">#001F11</span></div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="subsection" id="s3-error-colors">
+        <h3 class="subsection-title">Virhe-, varoitus-, ilmoitus- ja focusvärit</h3>
+        <p>Virhe-, varoitus-, ilmoitus- ja focusvärien on erotuttava riittävän selvästi sivuston muista väreistä. Värit ovat kaikilla sivustoilla samat, ja myös niitä koskee 4.5:1-kontrastivaatimus (ks. <a href="#s2">osio 2, Väri ja kontrasti</a>).</p>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#E63312"></div>
+            <div class="swatch-info"><span class="swatch-name">Virhe</span><span class="swatch-hex">#E63312</span></div>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#F18700"></div>
+            <div class="swatch-info"><span class="swatch-name">Varoitus</span><span class="swatch-hex">#F18700</span></div>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#2699D6"></div>
+            <div class="swatch-info"><span class="swatch-name">Ilmoitus</span><span class="swatch-hex">#2699D6</span></div>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-color" style="background:#C76F00"></div>
+            <div class="swatch-info"><span class="swatch-name">Focus</span><span class="swatch-hex">#C76F00</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TYPOGRAFIA ===== -->
+    <section class="section" id="s3-type">
+      <h2 class="section-title"><span class="section-number">3.2</span> Typografia ja tekstihierarkia</h2>
+
+      <p>Kaikki koot rem-yksiköissä, base 16 px.</p>
+
+      <div class="type-specimen">
+        <div class="type-label">H1 · Noto Sans Extra Condensed Bold 700 · Desktop 40px / 2.5rem, Mobiili 32px / 2rem, riviväli 1.2</div>
+        <div style="font-family:'Noto Sans',sans-serif;font-stretch:extra-condensed;font-weight:700;font-size:2.5rem;line-height:1.2;color:#002F6C">Sivun pääotsikko</div>
+        <div style="width:60px;height:4px;background:#365ABD;margin-top:10px"></div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">H2 · Noto Sans Extra Condensed Bold 700 · Desktop 32px / 2rem, Mobiili 28px / 1.75rem, riviväli 1.2</div>
+        <div style="font-family:'Noto Sans',sans-serif;font-stretch:extra-condensed;font-weight:700;font-size:2rem;line-height:1.2;color:#002F6C">Pääväliotsikko</div>
+        <div style="width:60px;height:4px;background:#365ABD;margin-top:10px"></div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">H3 · Noto Sans Extra Condensed Bold 700 · Desktop 24px / 1.5rem, Mobiili 20px / 1.25rem, riviväli 1.2</div>
+        <div style="font-family:'Noto Sans',sans-serif;font-stretch:extra-condensed;font-weight:700;font-size:1.5rem;line-height:1.2;color:#002F6C">Korttien ja osioiden otsikko</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">H4 · Noto Sans Extra Condensed Bold 700 · Desktop 20px / 1.25rem, Mobiili 18px / 1.125rem, riviväli 1.2</div>
+        <div style="font-family:'Noto Sans',sans-serif;font-stretch:extra-condensed;font-weight:700;font-size:1.25rem;line-height:1.2;color:#002F6C">Pieni otsikko</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Ingressi · Noto Sans Regular 400 · Desktop/Mobiili 20px / 1.25rem</div>
+        <div style="font-size:1.25rem;font-weight:400;line-height:1.6;color:#1A1F2E">Tämä on johdantoteksti, joka seuraa aina H1-otsikkoa ja antaa tiiviin kuvauksen sivun sisällöstä.</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Leipäteksti · Noto Sans Regular 400 · Desktop/Mobiili 16px / 1rem, riviväli 1.5</div>
+        <div style="font-size:1rem;font-weight:400;line-height:1.5;color:#1A1F2E">Tämä on ensisijainen lukuteksti. Tekstin on oltava skaalattavissa 200 % asti selaimen asetuksissa niin, ettei se estä sisällön lukemista tai sivuston käyttöä.</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Pieni teksti (päivämäärät, kuvatekstit tms.) · Noto Sans Regular 400 · Desktop/Mobiili 14px / 0.875rem, riviväli 1.5</div>
+        <div style="font-size:0.875rem;font-weight:400;color:#5D626A">15.3.2026 · Tiedote · Valtiovarainministeriö</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">UI-teksti (navigaatio, painikkeet tms.) · Noto Sans Regular 400 · Desktop/Mobiili 16px / 1rem, riviväli 1</div>
+        <div style="font-size:1rem;font-weight:400;color:#1A1F2E">Navigaatioteksti · Painiketeksti</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Metatiedot · Noto Sans Light 300 · Desktop/Mobiili 14px / 0.875rem, riviväli 1.5</div>
+        <div style="font-size:0.875rem;font-weight:300;color:#5D626A">Julkaistu 15.3.2026 · Päivitetty 20.4.2026</div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Pystyvälistykset</h3>
+        <p style="margin-bottom:var(--space-s)">Otsikon yläpuolinen väli on suurempi kuin alapuolinen — otsikko sitoutuu visuaalisesti alla olevaan sisältöön.</p>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Pystyvälistykset – taulukko">
+          <table>
+            <thead><tr><th>Elementti</th><th>Väli yläpuolella</th><th>Väli alapuolella</th></tr></thead>
+            <tbody>
+              <tr><td>H1</td><td>0 (sivun ensimmäinen elementti)</td><td>24px / <code>--space-m</code></td></tr>
+              <tr><td>H2</td><td>48px / <code>--space-xl</code></td><td>16px / <code>--space-s</code></td></tr>
+              <tr><td>H3</td><td>32px / <code>--space-l</code></td><td>8px / <code>--space-xs</code></td></tr>
+              <tr><td>H4</td><td>24px / <code>--space-m</code></td><td>8px / <code>--space-xs</code></td></tr>
+              <tr><td>Ingressi</td><td>0 (seuraa H1:tä)</td><td>32px / <code>--space-l</code></td></tr>
+              <tr><td>Leipäteksti</td><td>0</td><td>16px / <code>--space-s</code> (kappaleiden välillä)</td></tr>
+              <tr><td>Pieni teksti</td><td>8px / <code>--space-xs</code></td><td>8px / <code>--space-xs</code></td></tr>
+              <tr><td>UI-teksti</td><td>0</td><td>0</td></tr>
+              <tr><td>Metatiedot</td><td>8px / <code>--space-xs</code></td><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VÄLISTYKSET ===== -->
+    <section class="section" id="s3-spacing">
+      <h2 class="section-title"><span class="section-number">3.3</span> Välistykset</h2>
+      <p style="margin-bottom:var(--space-m)">Välistys noudattaa 8px:n järjestelmää.</p>
+
+      <div class="table-wrap" role="region" tabindex="0" aria-label="3.3 Välistykset – taulukko">
+        <table>
+          <thead><tr><th>Token</th><th>Arvo</th><th>Käyttö</th></tr></thead>
+          <tbody>
+            <tr><td><code>--space-xs</code></td><td>8px</td><td>Pienet sisäiset välit, ikonin ja tekstin väli</td></tr>
+            <tr><td><code>--space-s</code></td><td>16px</td><td>Kappaleiden väli, lomake-elementtien väli</td></tr>
+            <tr><td><code>--space-m</code></td><td>24px</td><td>Osioiden sisäinen padding, korttien sisäinen tila</td></tr>
+            <tr><td><code>--space-l</code></td><td>32px</td><td>Osioiden väli, komponenttien väli</td></tr>
+            <tr><td><code>--space-xl</code></td><td>48px</td><td>Suurten osioiden väli, H2:n ylämarginaali</td></tr>
+            <tr><td><code>--space-2xl</code></td><td>64px</td><td>Sivun pääosioiden väli</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== KULMAVIISTE ===== -->
+    <section class="section" id="s3-radius">
+      <h2 class="section-title"><span class="section-number">3.4</span> Pyöristys</h2>
+      <p>Käyttöliittymässä vältetään sekä täysin suoria kulmia että voimakkaita pyöristyksiä. Sen sijaan käytetään kevyttä, hienovaraista pyöristystä (<code>border-radius: 5px</code>), joka pehmentää ilmettä tinkimättä virallisesta ja asiantuntevasta tunnelmasta.</p>
+      <p>Pyöristys koskee kaikkia rajattuja elementtejä: painikkeita, lomake-elementtejä, kortteja, tageja, huomionauhoja, hakukenttiä, valintalaatikoita ja muita vastaavia käyttöliittymäelementtejä.</p>
+    </section>
+
+    <!-- ===== INTERAKTIIVISET TILAT ===== -->
+    <section class="section" id="s3-states">
+      <h2 class="section-title"><span class="section-number">3.5</span> Interaktiivisten elementtien tilat</h2>
+      <p>Kaikki interaktiiviset elementit reagoivat käyttäjän toimintaan seuraavasti:</p>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="3.5 Interaktiivisten elementtien tilat – taulukko">
+        <table>
+          <thead><tr><th>Tila</th><th>Kuvaus</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Hover</strong></td><td>Hienovarainen vaste, taustavärin 10 % tummennus</td></tr>
+            <tr><td><strong>Active</strong></td><td>Taustavärin 20 % tummennus</td></tr>
+            <tr><td><strong>Disabled</strong></td><td>Matala kontrasti (<code>opacity: 0.4</code>) ja <code>not-allowed</code>-kursori</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== TUNNUKSET ===== -->
+    <section class="section" id="s3-logos">
+      <h2 class="section-title"><span class="section-number">3.6</span> Tunnukset</h2>
+
+      <p>Valtioneuvoston ja ministeriöiden tunnukset ovat leijonamerkin ja nimilogon kiinteitä yhdistelmiä. Tunnuksia käytetään ensisijaisesti kokonaisina yhdistelminä — ainoastaan poikkeustapauksissa merkkiä tai logoa voidaan käyttää toisistaan erillisinä.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Väriverisiot</h3>
+        <p>Tunnuksesta on käytettävissä kolme väriversiota taustan mukaan.</p>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Väriverisiot – taulukko">
+          <table>
+            <thead><tr><th>Väri</th><th>Käyttö</th></tr></thead>
+            <tbody>
+              <tr><td>Värillinen</td><td>Valkoisella tai hyvin vaalealla taustalla</td></tr>
+              <tr><td>Valkoinen</td><td>Värillisellä tai tummalla taustalla</td></tr>
+              <tr><td>Musta</td><td>Ainoastaan jos muita värejä ei ole käytettävissä</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="demo-row">
+          <div class="logo-card" style="flex: 1; min-width: 160px;">
+            <div class="logo-card-preview">
+              <img loading="lazy" src="assets/tunnukset/tunnus_vn_colored.png" alt="Valtioneuvoston värillinen tunnus" style="max-height:130px;max-width:100%;object-fit:contain;">
+            </div>
+            <div class="logo-card-label">Värillinen · vaalea tausta</div>
+          </div>
+          <div class="logo-card" style="flex: 1; min-width: 160px;">
+            <div class="logo-card-preview dark">
+              <img loading="lazy" src="assets/tunnukset/tunnus_vn.png" alt="Valtioneuvoston valkoinen tunnus" style="max-height:130px;max-width:100%;object-fit:contain;">
+            </div>
+            <div class="logo-card-label">Valkoinen · tumma tausta</div>
+          </div>
+          <div class="logo-card" style="flex: 1; min-width: 160px;">
+            <div class="logo-card-preview" style="background: #fff;">
+              <img loading="lazy" src="assets/tunnukset/tunnus_vn_black.png" alt="Valtioneuvoston musta tunnus" style="max-height:130px;max-width:100%;object-fit:contain;">
+            </div>
+            <div class="logo-card-label">Musta · vain tarvittaessa</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Kieliversiot</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Kieliversiot – taulukko">
+          <table>
+            <thead><tr><th>Versio</th><th>Käyttö</th></tr></thead>
+            <tbody>
+              <tr><td>Kaksikielinen FI–SV</td><td>Ensisijainen versio kaikessa suomenkielisessä viestinnässä</td></tr>
+              <tr><td>Yksikielinen EN</td><td>Englanninkieliset aineistot — sisältää maatunnuksen (Finnish)</td></tr>
+              <tr><td>Yksikieliset FI / SV</td><td>Kun sama aineisto on tarjolla erikseen suomeksi ja ruotsiksi</td></tr>
+              <tr><td>Kolmikielinen FI–SV–EN</td><td>Varattu tilanteisiin, joissa erillisiä versioita ei ole mahdollista käyttää (esim. kulkuopasteet)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Suoja-alue</h3>
+        <p>Tunnuksen ympärillä on suoja-alue, joka osoittaa vähimmäisetäisyyden muihin graafisiin elementteihin tai näkymän reunoihin. Suoja-alueen leveys on sama kuin leijonamerkissä oleva etäisyys miekan kannasta kruunun keskiosan huippuun.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Minimikoko</h3>
+        <p>Sähköisessä käytössä tekstilogon kirjainkorkeus on vähintään 9 pikseliä.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Tunnuksen sijoittaminen kuvalle</h3>
+        <p>Kun tunnus sijoittuu kuvan tai väripinnan päälle, on varmistettava riittävä tummuusero taustaan. Kuvan tasasävyisyys ja syvyysepäterävyys tunnuksen taustalla parantavat erottumista.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Ministeriöiden tunnukset</h3>
+        <p>Kukin ministeriö käyttää omaa tunnustaan, jossa leijonamerkki on yhdistetty ministeriön nimeen. Tunnukset noudattavat samoja suoja-alue- ja minimikokosääntöjä kuin valtioneuvoston tunnus.</p>
+        <div class="logo-grid">
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_vnk.png" alt="Valtioneuvoston kanslia" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Valtioneuvoston kanslia</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_um.png" alt="Ulkoministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Ulkoministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_om.png" alt="Oikeusministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Oikeusministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_sm.png" alt="Sisäministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Sisäministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_plm.png" alt="Puolustusministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Puolustusministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_vm.png" alt="Valtiovarainministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Valtiovarainministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_okm.png" alt="Opetus- ja kulttuuriministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Opetus- ja kulttuuriministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_mmm.png" alt="Maa- ja metsätalousministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Maa- ja metsätalousministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_lvm.png" alt="Liikenne- ja viestintäministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Liikenne- ja viestintäministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_tem.png" alt="Työ- ja elinkeinoministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Työ- ja elinkeinoministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_stm.png" alt="Sosiaali- ja terveysministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Sosiaali- ja terveysministeriö</div></div>
+          <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_ym.png" alt="Ympäristöministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Ympäristöministeriö</div></div>
+        </div>
+      </div>
+
+    </section>
+
+        <!-- ===== GRID ===== -->
+    <section class="section" id="s4">
+      <h2 class="section-title"><span class="section-number">4.</span> Grid-järjestelmä</h2>
+
+      <p>Toteutus noudattaa mobile first -periaatetta: tyylimääritykset kirjoitetaan ensin pienimmälle näytölle ja skaalataan ylöspäin <code>min-width</code>-mediakyselyillä.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Breakpointit</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Breakpointit – taulukko">
+          <table>
+            <thead><tr><th>Tunnus</th><th>Leveys</th><th>Laite</th></tr></thead>
+            <tbody>
+              <tr><td><code>s</code></td><td>0–479 px</td><td>Puhelimet</td></tr>
+              <tr><td><code>m</code></td><td>480–767 px</td><td>Tabletit</td></tr>
+              <tr><td><code>l</code></td><td>768–1439 px</td><td>Kannettavat</td></tr>
+              <tr><td><code>xl</code></td><td>1440 px –</td><td>Pöytäkoneet</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Grid-järjestelmä</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Grid-järjestelmä – taulukko">
+          <table>
+            <thead><tr><th>Ominaisuus</th><th>s (0–479)</th><th>m (480–767)</th><th>l (768–1439)</th><th>xl (1440+)</th></tr></thead>
+            <tbody>
+              <tr><td>Sarakkeet</td><td>4</td><td>8</td><td>12</td><td>12</td></tr>
+              <tr><td>Gutter</td><td>16 px</td><td>24 px</td><td>24 px</td><td>32 px</td></tr>
+              <tr><td>Marginaali</td><td>24 px</td><td>32 px</td><td>32 px</td><td>auto</td></tr>
+              <tr><td>Maksimileveys</td><td>100 %</td><td>100 %</td><td>100 %</td><td>1280 px</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-label">12-sarakkeinen grid (xl/l)</div>
+        <div class="grid-viz grid-xl">
+          <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+        </div>
+        <div class="grid-label" style="margin-top:var(--space-xs)">8-sarakkeinen grid (m)</div>
+        <div class="grid-viz grid-m">
+          <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+        </div>
+        <div class="grid-label" style="margin-top:var(--space-xs)">4-sarakkeinen grid (s)</div>
+        <div class="grid-viz grid-s">
+          <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Käyttöperiaatteet</h3>
+        <ul class="styled">
+          <li>Maksimileveys on <strong>1280 px</strong> — sisältöalue ei kasva tätä leveämmäksi xl-näytöillä. Taustakuvat, väripalkit ja bannerit voivat ulottua koko näytön leveyteen.</li>
+          <li>Tekstisisältö suositellaan rajattavaksi <strong>8–10 sarakkeeseen</strong> luettavuuden varmistamiseksi leveillä näytöillä.</li>
+          <li>Gridin alasarakkeistus toteutetaan aina täysinä sarakeyksiköinä (esim. 8+4, 4+4+4, 3+9).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== HEADER & FOOTER ===== -->
+    <section class="section" id="s5">
+      <h2 class="section-title"><span class="section-number">5.</span> Header ja Footer</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Header</h3>
+        <div class="subsection--wireframe">
+          <div class="nav-demo">
+            <img loading="lazy" src="assets/tunnukset/tunnus_vn.png" alt="Valtioneuvosto" style="height:100px;width:auto;display:block;">
+            <div class="nav-actions">
+              <span class="nav-lang-btn active">FI</span>
+              <span class="nav-lang-btn">SV</span>
+              <span class="nav-lang-btn">EN</span>
+              <span style="width:1px;height:20px;background:rgba(255,255,255,0.2);margin:0 4px"></span>
+              <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;padding:4px 8px;display:flex;align-items:center;gap:4px" aria-label="Hae"><span class="material-symbols-outlined" style="font-size:20px" aria-hidden="true">search</span></span>
+              <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;padding:4px 8px;display:flex;align-items:center;gap:6px"><span class="material-symbols-outlined" style="font-size:20px">menu</span> Valikko</span>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Header – taulukko">
+          <table>
+            <thead><tr><th>Elementti</th><th>Kuvaus</th></tr></thead>
+            <tbody>
+              <tr><td>Taustaväri</td><td>Ministeriökohtainen väri</td></tr>
+              <tr><td>Logo (vasen)</td><td>SVG-muodossa, linkki etusivulle</td></tr>
+              <tr><td>Kielivalikko</td><td>FI / SV / EN, tekstipainikkeet, liputtomina</td></tr>
+              <tr><td>Hakupainike</td><td>Avaa hakukentän, ikoni + teksti "Hae"</td></tr>
+              <tr><td>Kiinnittyminen</td><td><code>position: sticky; top: 0</code>, tausta täysin peittävä</td></tr>
+              <tr><td>Megamenu</td><td>Avautuu "Valikko"-painikkeesta, peittää sivun sisällön kokonaan</td></tr>
+              <tr><td>Megamenu sulkeutuu</td><td>"Sulje"-painike, Escape, fokus siirtyy ulkopuolelle</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Footer</h3>
+        <div class="subsection--wireframe">
+          <div class="footer-extra-demo">
+            <div class="footer-extra-cols">
+              <div class="footer-extra-item">
+                <div class="footer-extra-item-title">Uusimmat tiedotteet</div>
+                <a href="#" class="footer-extra-link">Hallitus päätti kevään kehysriihestä</a>
+                <a href="#" class="footer-extra-link">Suomi EU:n neuvoston puheenjohtajaksi 2026</a>
+                <a href="#" class="footer-extra-link">Budjettiesitys 2027 lausuntokierrokselle</a>
+                <a href="#" class="footer-extra-link">Pääministerin tiedotustilaisuus 7.5.2026</a>
+              </div>
+              <div class="footer-extra-item">
+                <div class="footer-extra-item-title">Tietoa valtioneuvostosta</div>
+                <a href="#" class="footer-extra-link">Hallitusohjelma</a>
+                <a href="#" class="footer-extra-link">Ministerit ja ministeriöt</a>
+                <a href="#" class="footer-extra-link">Istunnot ja päätökset</a>
+                <a href="#" class="footer-extra-link">Lainsäädäntöhankkeet</a>
+              </div>
+              <div class="footer-extra-item">
+                <div class="footer-extra-item-title">Seuraa</div>
+                <a href="#" class="footer-extra-link">X / Twitter</a>
+                <a href="#" class="footer-extra-link">YouTube</a>
+                <a href="#" class="footer-extra-link">LinkedIn</a>
+                <a href="#" class="footer-extra-link">RSS-syöte</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-demo">
+            <div class="footer-cols">
+              <div class="footer-col">
+                <div class="footer-extra-item-title">Valtioneuvoston kanslia</div>
+                <ul>
+                  <li><a href="#">Yhteystiedot</a></li>
+                  <li><a href="#">Organisaatio ja johto</a></li>
+                  <li><a href="#">Avoimet työpaikat</a></li>
+                  <li><a href="#">Asiointi ja aukioloajat</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <div class="footer-extra-item-title">Tietoa sivustosta</div>
+                <ul>
+                  <li><a href="#">Saavutettavuusseloste</a></li>
+                  <li><a href="#">Tietosuojaseloste</a></li>
+                  <li><a href="#">Evästekäytännöt</a></li>
+                  <li><a href="#">Sivukartta</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <div class="footer-extra-item-title">Muut ministeriöt</div>
+                <ul>
+                  <li><a href="#">Ulkoministeriö</a></li>
+                  <li><a href="#">Valtiovarainministeriö</a></li>
+                  <li><a href="#">Oikeusministeriö</a></li>
+                  <li><a href="#">Kaikki ministeriöt</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <img loading="lazy" src="assets/tunnukset/tunnus_vn.png" alt="Valtioneuvosto" style="height:100px;width:auto;display:block;">
+              <div class="footer-copy">© 2026 Valtioneuvosto · valtioneuvosto.fi · <a href="#" style="color:rgba(255,255,255,0.4)">Sivukartta</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Footer – taulukko">
+          <table>
+            <thead><tr><th>Alue</th><th>Kuvaus</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Lisäfooter</strong> (valinnainen)</td><td>Nostoalue ajankohtaisille sisällöille tai pikakohdelinkeille</td></tr>
+              <tr><td><strong>Pääfooter</strong></td><td>3–4 palstaa leveillä näytöillä, pino mobiililla. Pakollisia sisältöjä mm. yhteystiedot, saavutettavuusseloste, tietosuojaseloste, evästekäytännöt</td></tr>
+              <tr><td><strong>Copyright-footer</strong></td><td>Logo, copyright-merkintä (automaattisesti päivittyvä vuosi) ja linkki sivukarttaan</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NAVIGAATIO ===== -->
+    <section class="section" id="s6">
+      <h2 class="section-title"><span class="section-number">6.</span> Navigaatio</h2>
+
+      <div class="table-wrap" style="margin-bottom:var(--space-m)" role="region" tabindex="0" aria-label="6. Navigaatio – taulukko">
+        <table>
+          <thead><tr><th>Taso</th><th>Kuvaus</th><th>Erityisvaatimukset</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Ministeriövalikko</strong></td>
+              <td>Pysyvä yläpalkki joka mahdollistaa siirtymisen ministeriöiden välillä — sama kaikilla sivustoilla</td>
+              <td>Väri: valtioneuvoston sininen, ei ministeriökohtainen. Avautuu klikkauksella tai fokuksella. Sulkeutuu Escape-näppäimellä. Valikko työntää sivun sisältöä alaspäin — ei avaudu sisällön päälle.</td>
+            </tr>
+            <tr>
+              <td><strong>Päänavigaatio</strong></td>
+              <td>Ministeriön sivuston päärakenne</td>
+              <td>Max. 2 tasoa, 5–7 pääkohtaa suositeltu. Dropdown avautuu klikkauksella tai fokuksella. Valikko työntää sivun sisältöä alaspäin — ei avaudu sisällön päälle.</td>
+            </tr>
+            <tr>
+              <td><strong>Apunavigaatio</strong></td>
+              <td>Näyttää aktiivisen pääkohdan alasivut</td>
+              <td>Sivupalkki leveillä näytöillä, taittuva elementti mobiilissa.</td>
+            </tr>
+            <tr>
+              <td><strong>Murupolku</strong></td>
+              <td>Osoittaa käyttäjän sijainnin sivustohierarkiassa</td>
+              <td>Sijoitetaan sisältöalueen yläreunaan.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Ministeriövalikko</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-s)">Esimerkki avatusta ministeriövalikosta. Valikko työntää sivun sisältöä alaspäin — se ei avaudu sisällön päälle.</p>
+        <nav class="ministerynav-demo" aria-label="Ministeriövalikko">
+          <div class="ministerynav-body">
+            <div class="ministerynav-vn">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                <a href="#" class="ministerynav-vn-link">Valtioneuvosto.fi</a>
+                <button class="nav-close-btn" aria-label="Sulje ministeriövalikko" style="display:flex;align-items:center;gap:4px;width:auto;padding:0 8px;">
+                  <span class="material-symbols-outlined">close</span>
+                  <span style="font-size:0.85rem;color:rgba(255,255,255,0.7);font-family:var(--font-body)">Sulje</span>
+                </button>
+              </div>
+              <p class="ministerynav-vn-desc">Suomen hallituksen ja ministeriöiden yhteinen verkkopalvelu. Tietoa hallitusohjelmasta, istunnoista ja valtioneuvoston toiminnasta.</p>
+            </div>
+            <div class="ministerynav-ministries">
+              <div class="ministerynav-group-label">Ministeriöt</div>
+              <div class="ministerynav-ministry-links">
+                <a href="#" class="ministerynav-link">Valtioneuvoston kanslia</a>
+                <a href="#" class="ministerynav-link">Ulkoministeriö</a>
+                <a href="#" class="ministerynav-link">Oikeusministeriö</a>
+                <a href="#" class="ministerynav-link">Sisäministeriö</a>
+                <a href="#" class="ministerynav-link">Puolustusministeriö</a>
+                <a href="#" class="ministerynav-link">Valtiovarainministeriö</a>
+                <a href="#" class="ministerynav-link">Opetus- ja kulttuuriministeriö</a>
+                <a href="#" class="ministerynav-link">Maa- ja metsätalousministeriö</a>
+                <a href="#" class="ministerynav-link">Liikenne- ja viestintäministeriö</a>
+                <a href="#" class="ministerynav-link">Työ- ja elinkeinoministeriö</a>
+                <a href="#" class="ministerynav-link">Sosiaali- ja terveysministeriö</a>
+                <a href="#" class="ministerynav-link">Ympäristöministeriö</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </nav>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Päänavigaatio</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-s)">Esimerkki avatusta päänavigaatiosta. Valikko työntää sivun sisältöä alaspäin — se ei avaudu sisällön päälle.</p>
+        <nav class="mainnav-demo" aria-label="Päänavigaatio">
+          <div class="nav-demo" style="border-radius:var(--radius) var(--radius) 0 0; margin-bottom:0;">
+            <img loading="lazy" src="assets/tunnukset/tunnus_vn.png" alt="Valtioneuvosto" style="height:100px;width:auto;display:block;">
+            <div class="nav-actions">
+              <span class="nav-lang-btn active">FI</span>
+              <span class="nav-lang-btn">SV</span>
+              <span class="nav-lang-btn">EN</span>
+              <span style="width:1px;height:20px;background:rgba(255,255,255,0.2);margin:0 4px"></span>
+              <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;padding:4px 8px;display:flex;align-items:center;gap:4px" aria-label="Hae"><span class="material-symbols-outlined" style="font-size:20px" aria-hidden="true">search</span></span>
+              <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;padding:4px 8px;display:flex;align-items:center;gap:6px"><span class="material-symbols-outlined" style="font-size:20px">close</span> Sulje</span>
+            </div>
+          </div>
+          <div class="mainnav-dropdown">
+            <div class="mainnav-tabs">
+              <a href="#" class="mainnav-tab mainnav-tab--active">Palvelut</a>
+              <a href="#" class="mainnav-tab">Tiedotteet</a>
+              <a href="#" class="mainnav-tab">Hankkeet</a>
+              <a href="#" class="mainnav-tab">Ministeriö</a>
+            </div>
+            <div class="mainnav-dropdown-cols">
+              <div class="mainnav-dropdown-col">
+                <div class="mainnav-dropdown-title">Luvat ja ilmoitukset</div>
+                <a href="#" class="mainnav-dropdown-link">Rakennuslupa</a>
+                <a href="#" class="mainnav-dropdown-link">Ympäristölupa</a>
+                <a href="#" class="mainnav-dropdown-link">Maa-aineslupa</a>
+                <a href="#" class="mainnav-dropdown-link">Toiminnan lopettaminen</a>
+              </div>
+              <div class="mainnav-dropdown-col">
+                <div class="mainnav-dropdown-title">Neuvonta ja asiointi</div>
+                <a href="#" class="mainnav-dropdown-link">Puhelinneuvonta</a>
+                <a href="#" class="mainnav-dropdown-link">Sähköinen asiointi</a>
+                <a href="#" class="mainnav-dropdown-link">Lomakkeet</a>
+                <a href="#" class="mainnav-dropdown-link">Yhteystiedot</a>
+              </div>
+              <div class="mainnav-dropdown-col">
+                <div class="mainnav-dropdown-title">Maksut ja hinnat</div>
+                <a href="#" class="mainnav-dropdown-link">Hinnasto</a>
+                <a href="#" class="mainnav-dropdown-link">Maksaminen</a>
+                <a href="#" class="mainnav-dropdown-link">Taksat ja perintä</a>
+                <a href="#" class="mainnav-dropdown-link">Palautusehdot</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Apunavigaatio</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-s)">Apunavigaatio sijaitsee sisältöalueen vasemmalla puolella. Esimerkki näyttää tyypillisen sisältösivun asettelun.</p>
+
+        <div class="page-layout-demo">
+
+          <!-- Miniheader -->
+          <div class="nav-demo" style="border-radius:var(--radius) var(--radius) 0 0;margin-bottom:0;">
+            <img loading="lazy" src="assets/tunnukset/tunnus_vn.png" alt="Valtioneuvosto" style="height:100px;width:auto;display:block;">
+            <div class="nav-actions">
+              <span class="nav-lang-btn active">FI</span>
+              <span class="nav-lang-btn">SV</span>
+              <span class="nav-lang-btn">EN</span>
+              <span style="width:1px;height:20px;background:rgba(255,255,255,0.2);margin:0 4px"></span>
+              <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;padding:4px 8px;display:flex;align-items:center;gap:4px" aria-label="Hae"><span class="material-symbols-outlined" style="font-size:20px" aria-hidden="true">search</span></span>
+              <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;padding:4px 8px;display:flex;align-items:center;gap:6px"><span class="material-symbols-outlined" style="font-size:20px">menu</span> Valikko</span>
+            </div>
+          </div>
+
+          <!-- Murupolku -->
+          <div class="page-demo-breadcrumb">
+            <nav class="breadcrumb" aria-label="Murupolku">
+              <a href="#">Etusivu</a>
+              <span class="breadcrumb-sep">›</span>
+              <a href="#">Palvelut</a>
+              <span class="breadcrumb-sep">›</span>
+              <a href="#">Luvat ja ilmoitukset</a>
+              <span class="breadcrumb-sep">›</span>
+              <span aria-current="page">Rakennuslupa</span>
+            </nav>
+          </div>
+
+          <!-- Sisältöalue -->
+          <div class="page-demo-body">
+
+            <!-- Apunavigaatio -->
+            <nav class="page-demo-sidenav" aria-label="Rakennuslupa-osion navigaatio">
+              <div class="sidenav-section-title">Rakennuslupa</div>
+              <ul class="sidenav-list">
+                <li><a href="#" class="sidenav-link">Milloin tarvitaan lupa</a></li>
+                <li><a href="#" class="sidenav-link">Hakeminen</a></li>
+                <li>
+                  <a href="#" class="sidenav-link sidenav-link--active" aria-current="page">Liitteet ja asiakirjat</a>
+                  <ul class="sidenav-sub">
+                    <li><a href="#" class="sidenav-link sidenav-link--active-sub">Pääpiirustukset</a></li>
+                    <li><a href="#" class="sidenav-link">Selvitykset ja lausunnot</a></li>
+                    <li><a href="#" class="sidenav-link">Naapurien kuuleminen</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="sidenav-link">Käsittely ja päätös</a></li>
+                <li>
+                  <a href="#" class="sidenav-link">Rakentamisen aloitus</a>
+                  <ul class="sidenav-sub">
+                    <li><a href="#" class="sidenav-link">Aloituskokous</a></li>
+                    <li><a href="#" class="sidenav-link">Katselmukset</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="sidenav-link">Loppukatselmus</a></li>
+                <li><a href="#" class="sidenav-link">Muutokset ja poikkeukset</a></li>
+              </ul>
+            </nav>
+
+            <!-- Sisältö -->
+            <div class="page-demo-content">
+              <h1 class="page-demo-h1">Liitteet ja asiakirjat</h1>
+              <p class="page-demo-ingress">Rakennuslupahakemukseen tarvitaan useita asiakirjoja. Tarkista tästä mitä liitteitä hakemuksesi tarvitsee.</p>
+              <div class="page-demo-body-text">
+                <div class="page-demo-line"></div>
+                <div class="page-demo-line" style="width:85%"></div>
+                <div class="page-demo-line" style="width:90%"></div>
+                <div class="page-demo-line" style="width:70%"></div>
+                <div class="page-demo-line" style="width:88%;margin-top:var(--space-m)"></div>
+                <div class="page-demo-line" style="width:80%"></div>
+                <div class="page-demo-line" style="width:75%"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Murupolku</h3>
+        <div class="subsection--wireframe">
+        <div class="breadcrumb-demo">
+          <nav class="breadcrumb" aria-label="Murupolku">
+            <a href="#">Etusivu</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="#">Palvelut</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="#">Luvat ja ilmoitukset</a>
+            <span class="breadcrumb-sep">›</span>
+            <span aria-current="page">Rakennuslupa</span>
+          </nav>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Navigaation saavutettavuusvaatimukset</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Navigaation saavutettavuusvaatimukset – taulukko">
+          <table>
+            <thead><tr><th>Vaatimus</th><th>Toteutus</th></tr></thead>
+            <tbody>
+              <tr><td>Näppäimistökäyttö</td><td>Tab, Enter, Space ja nuolinäppäimet</td></tr>
+              <tr><td>Aktiivinen kohta</td><td><code>aria-current="page"</code> + visuaalinen korostus</td></tr>
+              <tr><td>Dropdown-tila</td><td><code>aria-expanded="true/false"</code></td></tr>
+              <tr><td>Fokus-indikaattori</td><td>Ks. osio 2</td></tr>
+              <tr><td>Skip-linkki</td><td>"Siirry sisältöön" ennen navigaatiota, näkyy fokusoitaessa</td></tr>
+              <tr><td>Mobiilivalikko</td><td>Fokus ei karkaa valikon ulkopuolelle valikon ollessa auki. Escape sulkee valikon ja palauttaa fokuksen avaavaan painikkeeseen.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PAINIKKEET ===== -->
+    <section class="section" id="s7">
+      <h2 class="section-title"><span class="section-number">7.</span> Painikkeet ja linkit</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Painikkeet</h3>
+        <p style="margin-bottom:var(--space-m)">Painikkeet käynnistävät toiminnon. Ne eivät koskaan ole navigointilinkkejä. Minimikorkeus kaikissa kooissa: <strong>44 px</strong>.</p>
+
+        <div class="demo-row">
+          <button class="demo-btn btn-primary">Primary</button>
+          <button class="demo-btn btn-secondary">Secondary</button>
+          <button class="demo-btn btn-ghost">Ghost</button>
+          <button class="demo-btn btn-destructive">Destructive</button>
+          <button class="demo-btn btn-primary" style="opacity:0.4;cursor:not-allowed">Disabled</button>
+        </div>
+
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Painikkeet – taulukko">
+          <table>
+            <thead><tr><th>Tyyppi</th><th>Käyttö</th><th>Tyyli</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Primary</strong></td><td>Sivun tärkein toiminto, yksi kerrallaan</td><td><code>background: var(--ministry-color)</code></td></tr>
+              <tr><td><strong>Secondary</strong></td><td>Toissijainen toiminto primary:n rinnalla</td><td>Läpinäkyvä tausta, <code>--ministry-color</code>-reunaviiva</td></tr>
+              <tr><td><strong>Ghost</strong></td><td>Vähemmän tärkeät toiminnot</td><td>Ei reunaviivaa, alleviivattu teksti</td></tr>
+              <tr><td><strong>Destructive</strong></td><td>Peruuttamattomat toiminnot</td><td><code>background: #E63312</code></td></tr>
+              <tr><td><strong>Disabled</strong></td><td>Toiminto ei ole käytettävissä</td><td><code>opacity: 0.4</code>, <code>cursor: not-allowed</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Linkit</h3>
+        <p style="margin-bottom:var(--space-m)">Linkit erottuvat ympäröivästä tekstistä aina vähintään kahdella tavalla — värin lisäksi alleviivaus tai muu visuaalinen merkki.</p>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Linkit – taulukko">
+          <table>
+            <thead><tr><th>Tyyppi</th><th>Esimerkki</th><th>Vaatimukset</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Leipätekstilinkki</strong></td>
+                <td><a class="link-body" href="#">Lisätietoja rakennusluvasta</a></td>
+                <td>Ministeriökohtainen väri, alleviivaus aina näkyvissä</td>
+              </tr>
+              <tr>
+                <td><strong>Ulkoinen linkki</strong></td>
+                <td><a class="link-body link-external" href="#">Suomi.fi-palvelut</a></td>
+                <td>Merkitään ulkoisen linkin ikonilla. Ruudunlukijalle ilmoitetaan "(avautuu uuteen välilehteen)". Avautuu aina uuteen välilehteen (<code>target="_blank"</code>).</td>
+              </tr>
+              <tr>
+                <td><strong>Latauslinkki</strong></td>
+                <td>
+                  <a class="link-body link-download" href="#">Hakemuslomake <span class="file-type-label">PDF</span> <span class="file-size">0,3 Mt</span></a>
+                </td>
+                <td>Tiedostotyyppi merkitään labelilla, koko ilmoitetaan linkkitekstissä. Merkitään latausikonilla.</td>
+              </tr>
+              <tr>
+                <td><strong>CTA-linkki</strong></td>
+                <td><a class="demo-btn btn-secondary" href="#" style="font-size:0.875rem;padding:10px 20px;text-decoration:none;display:inline-flex">Siirry hakupalveluun</a></td>
+                <td>Painikeasuinen linkki joka navigoi toiselle sivulle tai ulkoiseen palveluun. Semanttisesti <code>&lt;a&gt;</code>, ei <code>&lt;button&gt;</code>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOMAKKEET ===== -->
+    <section class="section" id="s8">
+      <h2 class="section-title"><span class="section-number">8.</span> Lomake-elementit</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Lomake</h3>
+        <div class="subsection--wireframe">
+        <div class="form-demo form-demo--full">
+          <p class="text-small" style="margin-bottom:var(--space-m)">* Pakollinen kenttä. Sähköpostikenttä näyttää tarkoituksella esimerkin virhetilasta — kyseessä ei ole toimiva lomake.</p>
+          <div class="form-demo-cols">
+            <div class="form-group">
+              <label class="form-label" for="ex-name">Nimi <span class="required-star" aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="ex-name" aria-required="true" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ex-email">Sähköpostiosoite <span class="required-star" aria-hidden="true">*</span></label>
+              <input class="form-input error" type="email" id="ex-email" aria-required="true" value="virheellinen@" autocomplete="email">
+              <div class="form-error" role="alert">Anna kelvollinen sähköpostiosoite, esim. nimi@esimerkki.fi</div>
+            </div>
+          </div>
+          <div class="form-demo-cols">
+            <div class="form-group">
+              <label class="form-label" for="ex-select">Lupajärjestelmä <span class="required-star" aria-hidden="true">*</span></label>
+              <select class="form-input" id="ex-select" aria-required="true" style="cursor:pointer">
+                <option value="">Valitse...</option>
+                <option value="1">Rakennuslupa</option>
+                <option value="2" selected>Ympäristölupa</option>
+                <option value="3">Maa-aineslupa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ex-phone">Puhelinnumero</label>
+              <input class="form-input" type="tel" id="ex-phone" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-demo-cols">
+            <fieldset class="form-fieldset">
+              <legend class="form-label">Hakemuksen tyyppi <span class="required-star" aria-hidden="true">*</span></legend>
+              <div class="form-radio-group">
+                <label class="form-check-label"><input type="radio" name="ex-type" value="new" checked style="accent-color:var(--color-primary);width:20px;height:20px"> Uusi hakemus</label>
+                <label class="form-check-label"><input type="radio" name="ex-type" value="change" style="accent-color:var(--color-primary);width:20px;height:20px"> Muutoshakemus</label>
+                <label class="form-check-label"><input type="radio" name="ex-type" value="extension" style="accent-color:var(--color-primary);width:20px;height:20px"> Jatkoaikahakemus</label>
+              </div>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <legend class="form-label">Lisäpalvelut</legend>
+              <div class="form-radio-group">
+                <label class="form-check-label"><input type="checkbox" style="accent-color:var(--color-primary);width:20px;height:20px"> Katselmuspalvelu</label>
+                <label class="form-check-label"><input type="checkbox" checked style="accent-color:var(--color-primary);width:20px;height:20px"> Sähköinen tiedoksianto</label>
+                <label class="form-check-label"><input type="checkbox" style="accent-color:var(--color-primary);width:20px;height:20px"> Neuvontapalvelu</label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+          <div class="form-group">
+            <label class="form-label" for="ex-msg">Lisätiedot</label>
+            <textarea class="form-input" id="ex-msg" rows="3" style="resize:vertical;min-height:120px"></textarea>
+          </div>
+          <div style="display:flex;gap:var(--space-s);margin-top:var(--space-xs)">
+            <button class="demo-btn btn-primary">Lähetä hakemus</button>
+            <button class="demo-btn btn-secondary">Tallenna luonnos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Lomake-elementtien vaatimukset</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Lomake-elementtien vaatimukset – taulukko">
+          <table>
+            <thead><tr><th>Elementti</th><th>Vaatimukset</th></tr></thead>
+            <tbody>
+              <tr><td>Tekstikenttä</td><td>Reunaviiva 2 px, fokuksessa focusväri, virhetilassa <code>#E63312</code>. Minimikorkeus 44 px.</td></tr>
+              <tr><td>Textarea</td><td><code>resize: vertical</code>, minimikorkeus 120 px</td></tr>
+              <tr><td>Select</td><td>Natiivi <code>&lt;select&gt;</code> ensisijaisesti. Mukautettu sallittu vain täysimääräisellä ARIA-tuella.</td></tr>
+              <tr><td>Checkbox / Radio</td><td>Minimikoko 24×24 px. Ryhmitellään <code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code>. Väri: <code>accent-color</code> ministeriökohtaisella värillä.</td></tr>
+              <tr><td>Label</td><td>Näkyvä <code>&lt;label&gt;</code> jokaiselle kentälle — placeholder ei korvaa labelia</td></tr>
+              <tr><td>Pakolliset kentät</td><td>Asteriski * visuaalisesti + <code>aria-required="true"</code>. Lomakkeen alussa kerrotaan, että * tarkoittaa pakollista kenttää.</td></tr>
+              <tr><td>Autocomplete</td><td><code>autocomplete</code>-attribuutti pakollinen henkilötietokentille (WCAG 1.3.5), esim. <code>name</code>, <code>email</code>, <code>tel</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Virheilmoitukset</h3>
+        <p>Virhe ilmaistaan aina sekä värin, ikonin että tekstin avulla — väri ei yksin riitä. Virheilmoitus esitetään kentän alla välittömästi lähetyksen tai kentästä poistumisen jälkeen. Useista virheistä kootaan <strong>yhteenveto lomakkeen yläosaan</strong>, joka saa fokuksen lähetyksen jälkeen.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Tietoturva</h3>
+        <p>Kaikki lomakkeet tietoturvatestataan ennen käyttöönottoa. Testaus kattaa vähintään XSS-, CSRF- ja SQL-injektiohaavoittuvuudet.</p>
+      </div>
+
+    </section>
+
+    <!-- ===== KORTIT ===== -->
+    <section class="section" id="s9">
+      <h2 class="section-title"><span class="section-number">9.</span> Nostot</h2>
+      <p>Nostot ovat toimituksellisia — ylläpitäjä valitsee nostettavat sisällöt.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Kuvaton nosto</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-m)">Sisällöntuottaja lisää otsikon sekä linkit kuvauksineen. Kuvaa ei käytetä.</p>
+        <div class="promo-text">
+          <h3 class="promo-title">Rakentaminen ja luvat</h3>
+          <ul class="promo-links">
+            <li class="promo-link-item">
+              <a href="#" class="promo-link">Rakennuslupa</a>
+              <p class="promo-link-desc">Tarvitset rakennusluvan uudisrakentamiseen ja laajentamiseen. Lue lisää luvan hakemisesta ja vaatimuksista.</p>
+            </li>
+            <li class="promo-link-item">
+              <a href="#" class="promo-link">Toimenpidelupa</a>
+              <p class="promo-link-desc">Toimenpidelupa tarvitaan pienempiin rakentamistoimenpiteisiin, kuten katoksen tai aitataan rakentamiseen.</p>
+            </li>
+            <li class="promo-link-item">
+              <a href="#" class="promo-link">Purkamislupa</a>
+              <p class="promo-link-desc">Rakennuksen purkamiseen tarvitaan lupa, jos rakennuksella on maisemallista, historiallista tai arkkitehtuurista arvoa.</p>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Kuvallinen nosto</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-m)">Sisällöntuottaja lisää kuvan, otsikon sekä linkit kuvauksineen.</p>
+        <div class="promo-image">
+          <div class="promo-image-col">
+            <div class="promo-image-placeholder">1:1</div>
+          </div>
+          <div class="promo-image-content">
+            <h3 class="promo-title">Ympäristö ja luonto</h3>
+            <ul class="promo-links">
+              <li class="promo-link-item">
+                <a href="#" class="promo-link">Luonnonsuojelu</a>
+                <p class="promo-link-desc">Suomi on sitoutunut suojelemaan 30 % maa- ja merialueistaan vuoteen 2030 mennessä.</p>
+              </li>
+              <li class="promo-link-item">
+                <a href="#" class="promo-link">Ilmastopolitiikka</a>
+                <p class="promo-link-desc">Suomi tavoittelee hiilineutraaliutta vuoteen 2035 mennessä. Lue kansallisesta ilmastosuunnitelmasta.</p>
+              </li>
+              <li class="promo-link-item">
+                <a href="#" class="promo-link">Kiertotalous</a>
+                <p class="promo-link-desc">Kiertotaloudella vähennetään luonnonvarojen kulutusta ja hillitään ilmastonmuutosta.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LISTAUKSET ===== -->
+    <section class="section" id="s10">
+      <h2 class="section-title"><span class="section-number">10.</span> Listaukset</h2>
+      <p>Listaukset näyttävät sisältöä automaattisesti kriteerien perusteella. Käyttäjä voi suodattaa ja sivuttaa tuloksia.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Ruudukkolistaus</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-m)">Kortit skaalautuvat 3 → 2 → 1 sarakkeeseen näyttökoosta riippuen. Ainoa klikkausalue on otsikkolinkki.</p>
+        <div class="card-demos">
+          <div class="demo-card">
+            <div class="card-img">16:9</div>
+            <div class="card-body">
+              <div class="card-tag"><span class="tag tag-content">Tiedote</span></div>
+              <div class="card-title"><a class="link-body" href="#">Hallitus päätti kehysriihessä julkisen talouden sopeutustoimista</a></div>
+              <div class="card-meta">15.3.2026 · Valtioneuvoston kanslia</div>
+            </div>
+          </div>
+          <div class="demo-card">
+            <div class="card-img">16:9</div>
+            <div class="card-body">
+              <div class="card-tag"><span class="tag tag-content">Uutinen</span></div>
+              <div class="card-title"><a class="link-body" href="#">Uusi asetus rakentamisen lupamenettelyistä astuu voimaan ensi vuonna</a></div>
+              <div class="card-meta">12.3.2026 · Oikeusministeriö</div>
+            </div>
+          </div>
+          <div class="demo-card">
+            <div class="card-img">16:9</div>
+            <div class="card-body">
+              <div class="card-tag"><span class="tag tag-content">Tiedote</span></div>
+              <div class="card-title"><a class="link-body" href="#">Suomen EU-puheenjohtajuuskauden prioriteetit vahvistettu</a></div>
+              <div class="card-meta">8.3.2026 · Ulkoministeriö</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Rivilistaus</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-m)">Sisältörivit listataan allekkain. Kuva on 1:1-kuvasuhteella sisällön vasemmalla puolella.</p>
+        <div class="list-demo">
+          <div class="list-item">
+            <div class="list-item-img"></div>
+            <div class="list-item-body">
+              <div class="list-item-meta"><span class="tag tag-content" style="margin-right:6px">Tiedote</span>15.3.2026 · Valtioneuvoston kanslia</div>
+              <div class="list-item-title"><a class="link-body" href="#">Hallitus päätti kehysriihessä julkisen talouden sopeutustoimista</a></div>
+              <div class="list-item-ingress">Hallitus sopi kehysriihessä useista sopeutustoimista, joilla vahvistetaan julkista taloutta vuosina 2027–2030. Toimet koskevat sekä menoja että tuloja.</div>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item-img"></div>
+            <div class="list-item-body">
+              <div class="list-item-meta"><span class="tag tag-content" style="margin-right:6px">Uutinen</span>12.3.2026 · Oikeusministeriö</div>
+              <div class="list-item-title"><a class="link-body" href="#">Uusi asetus rakentamisen lupamenettelyistä astuu voimaan ensi vuonna</a></div>
+              <div class="list-item-ingress">Rakentamisen lupamenettelyjä yksinkertaistetaan uudella asetuksella, joka astuu voimaan 1.1.2027. Muutos sujuvoittaa erityisesti pienten rakennushankkeiden lupaprosessia.</div>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item-img"></div>
+            <div class="list-item-body">
+              <div class="list-item-meta"><span class="tag tag-content" style="margin-right:6px">Tiedote</span>8.3.2026 · Ulkoministeriö</div>
+              <div class="list-item-title"><a class="link-body" href="#">Suomen EU-puheenjohtajuuskauden prioriteetit vahvistettu</a></div>
+              <div class="list-item-ingress">Suomi toimii EU:n neuvoston puheenjohtajana toisella vuosipuoliskolla 2026. Prioriteetteina ovat kilpailukyky, turvallisuus ja oikeusvaltioperiaate.</div>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item-img"></div>
+            <div class="list-item-body">
+              <div class="list-item-meta"><span class="tag tag-content" style="margin-right:6px">Uutinen</span>5.3.2026 · Ympäristöministeriö</div>
+              <div class="list-item-title"><a class="link-body" href="#">Luonnonsuojelulain uudistus etenee lausuntokierrokselle</a></div>
+              <div class="list-item-ingress">Luonnonsuojelulain osittaisuudistus lähtee lausuntokierrokselle maaliskuussa. Uudistuksella vahvistetaan uhanalaisten lajien ja luontotyyppien suojelua.</div>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item-img"></div>
+            <div class="list-item-body">
+              <div class="list-item-meta"><span class="tag tag-content" style="margin-right:6px">Tiedote</span>2.3.2026 · Valtiovarainministeriö</div>
+              <div class="list-item-title"><a class="link-body" href="#">Valtion budjettiesitys 2027 lähetettiin lausuntokierrokselle</a></div>
+              <div class="list-item-ingress">Ensi vuoden talousarvioehdotus on lausuttavana 31.3.2026 asti. Budjettiesitys on tasapainottava ja ottaa huomioon kehysriihessä sovitut sopeutustoimet.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Sivutuskomponentti</h3>
+        <div class="subsection--wireframe">
+          <nav class="pagination" aria-label="Tiedotteiden sivutus">
+            <a class="page-btn" href="#" aria-label="Edellinen sivu">‹</a>
+            <a class="page-btn" href="#" aria-label="Sivu 1">1</a>
+            <a class="page-btn active" href="#" aria-label="Sivu 2" aria-current="page">2</a>
+            <a class="page-btn" href="#" aria-label="Sivu 3">3</a>
+            <span class="page-btn" aria-hidden="true">…</span>
+            <a class="page-btn" href="#" aria-label="Sivu 12">12</a>
+            <a class="page-btn" href="#" aria-label="Seuraava sivu">›</a>
+          </nav>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== ACCORDION & TAULUKOT ===== -->
+    <section class="section" id="s11">
+      <h2 class="section-title"><span class="section-number">11.</span> Accordion ja taulukot</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Accordion</h3>
+        <div class="subsection--wireframe">
+        <div class="accordion-demo">
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="true" aria-controls="accordion-content-1" id="accordion-trigger-1">
+              <span>Milloin rakennuslupaa ei tarvita?</span>
+              <span class="accordion-arrow open" aria-hidden="true"><span class="material-symbols-outlined" style="font-size:20px">expand_more</span></span>
+            </button>
+            <div class="accordion-content" id="accordion-content-1" role="region" aria-labelledby="accordion-trigger-1">
+              Pienehköt rakennustoimenpiteet, kuten alle 15 m² suuruisen talousrakennuksen rakentaminen tai pienet korjaustyöt, eivät yleensä vaadi rakennuslupaa. Kunta voi kuitenkin edellyttää toimenpidelupaa tai ilmoitusta. Tarkista aina oman kuntasi ohjeet.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accordion-content-2" id="accordion-trigger-2">
+              <span>Kuinka kauan luvan käsittely kestää?</span>
+              <span class="accordion-arrow" aria-hidden="true"><span class="material-symbols-outlined" style="font-size:20px">expand_more</span></span>
+            </button>
+            <div class="accordion-content" id="accordion-content-2" role="region" aria-labelledby="accordion-trigger-2" hidden>
+              Käsittelyaika vaihtelee kunnan ja hakemuksen laajuuden mukaan, mutta tavanomaiselle rakennusluvalle se on yleensä 1–3 kuukautta hakemuksen jättämisestä. Käsittelyaika pitenee, jos hakemuksessa on puutteita tai se vaatii lisäselvityksiä.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accordion-content-3" id="accordion-trigger-3">
+              <span>Mitä liitteitä hakemukseen tarvitaan?</span>
+              <span class="accordion-arrow" aria-hidden="true"><span class="material-symbols-outlined" style="font-size:20px">expand_more</span></span>
+            </button>
+            <div class="accordion-content" id="accordion-content-3" role="region" aria-labelledby="accordion-trigger-3" hidden>
+              Hakemukseen tarvitaan tavallisesti pääpiirustukset, selvitys rakennuspaikan hallintaoikeudesta sekä naapurien kuuleminen. Kunnan rakennusvalvonta kertoo tarkat liitevaatimukset kohteen mukaan.
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Accordionin vaatimukset</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Accordionin vaatimukset – taulukko">
+          <table>
+            <thead><tr><th>Vaatimus</th><th>Toteutus</th></tr></thead>
+            <tbody>
+              <tr><td>Trigger-elementti</td><td>Aina <code>&lt;button&gt;</code> — ei <code>&lt;div&gt;</code> tai <code>&lt;a&gt;</code></td></tr>
+              <tr><td>Tila</td><td><code>aria-expanded="true/false"</code> trigger-painikkeessa</td></tr>
+              <tr><td>Sisältö</td><td><code>aria-controls</code> viittaa sisältöelementtiin, <code>id</code> sisältöelementissä</td></tr>
+              <tr><td>Animaatio</td><td>Enintään <code>0.2s ease-in-out</code>. Kunnioittaa <code>prefers-reduced-motion</code>-asetusta.</td></tr>
+              <tr><td>Suljettu sisältö</td><td><code>display: none</code> tai <code>hidden</code> — ei pelkästään visuaalisesti piilotettu</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Taulukot</h3>
+        <div class="subsection--wireframe">
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Taulukot – taulukko">
+          <table>
+            <caption style="caption-side:top;text-align:left;background:var(--color-dark-blue);color:#fff;padding:10px var(--space-m);font-family:var(--font-heading);font-stretch:extra-condensed;font-size:1.1rem;font-weight:700;letter-spacing:0.01em">Rakennuslupahakemusten käsittelyajat 2025</caption>
+            <thead>
+              <tr>
+                <th scope="col">Lupajärjestelmä</th>
+                <th scope="col">Keskimääräinen käsittelyaika</th>
+                <th scope="col">Nopein</th>
+                <th scope="col">Pisin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Rakennuslupa</th><td>42 vrk</td><td>14 vrk</td><td>180 vrk</td></tr>
+              <tr><th scope="row">Toimenpidelupa</th><td>18 vrk</td><td>7 vrk</td><td>60 vrk</td></tr>
+              <tr><th scope="row">Purkamislupa</th><td>24 vrk</td><td>10 vrk</td><td>90 vrk</td></tr>
+              <tr><th scope="row">Maisematyölupa</th><td>15 vrk</td><td>5 vrk</td><td>45 vrk</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Taulukoiden vaatimukset</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Taulukoiden vaatimukset – taulukko">
+          <table>
+            <thead><tr><th>Vaatimus</th><th>Toteutus</th></tr></thead>
+            <tbody>
+              <tr><td>Otsikko</td><td><code>&lt;caption&gt;</code> pakollinen kaikissa taulukoissa</td></tr>
+              <tr><td>Sarakeotsikot</td><td><code>scope="col"</code> <code>&lt;th&gt;</code>-elementeissä</td></tr>
+              <tr><td>Riviotsikot</td><td><code>scope="row"</code> <code>&lt;th&gt;</code>-elementeissä tarvittaessa</td></tr>
+              <tr><td>Vierittyvä taulukko</td><td>Kääritään <code>role="region"</code> + <code>tabindex="0"</code> + <code>aria-label</code> -elementtiin</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IKONOGRAFIA ===== -->
+    <section class="section" id="s12">
+      <h2 class="section-title"><span class="section-number">12.</span> Ikonografia</h2>
+
+      <p>Ikonit toteutetaan Google Material Symbols -kirjastolla (Apache 2.0). Tyyli — Outlined tai Filled — valitaan projektin alussa ja pidetään yhtenäisenä läpi sivuston.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Ikonikoot</h3>
+        <div class="subsection--wireframe">
+        <div class="icon-demos">
+          <div class="icon-demo">
+            <div class="icon-box" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center">
+              <span class="material-symbols-outlined" style="font-size:16px;color:var(--color-primary)">home</span>
+            </div>
+            <span class="icon-label">16 px</span>
+          </div>
+          <div class="icon-demo">
+            <div class="icon-box" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center">
+              <span class="material-symbols-outlined" style="font-size:20px;color:var(--color-primary)">home</span>
+            </div>
+            <span class="icon-label">20 px</span>
+          </div>
+          <div class="icon-demo">
+            <div class="icon-box" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center">
+              <span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">home</span>
+            </div>
+            <span class="icon-label">24 px</span>
+          </div>
+          <div class="icon-demo">
+            <div class="icon-box" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center">
+              <span class="material-symbols-outlined" style="font-size:32px;color:var(--color-primary)">home</span>
+            </div>
+            <span class="icon-label">32 px</span>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Esimerkkiikoneja</h3>
+        <div class="icon-demos" style="flex-wrap:wrap;gap:var(--space-m)">
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">search</span><span class="icon-label">search</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">menu</span><span class="icon-label">menu</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">close</span><span class="icon-label">close</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">arrow_forward</span><span class="icon-label">arrow_forward</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">download</span><span class="icon-label">download</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">open_in_new</span><span class="icon-label">open_in_new</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">info</span><span class="icon-label">info</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">warning</span><span class="icon-label">warning</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">check_circle</span><span class="icon-label">check_circle</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">error</span><span class="icon-label">error</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">description</span><span class="icon-label">description</span></div>
+          <div class="icon-demo"><span class="material-symbols-outlined" style="font-size:24px;color:var(--color-primary)">home_work</span><span class="icon-label">home_work</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Saavutettavuusvaatimukset</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Saavutettavuusvaatimukset – taulukko">
+          <table>
+            <thead><tr><th>Vaatimus</th><th>Toteutus</th></tr></thead>
+            <tbody>
+              <tr><td>Koristeelliset ikonit</td><td><code>aria-hidden="true"</code> + <code>focusable="false"</code></td></tr>
+              <tr><td>Klikattava ikonipainike ilman tekstiä</td><td><code>sr-only</code>-teksti tai <code>aria-label</code></td></tr>
+              <tr><td>Ikonin merkitys</td><td>Ilmaistaan aina myös tekstillä tai muulla visuaalisella keinolla — väri ei yksin riitä (ks. osio 2.3)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MEDIA ===== -->
+    <section class="section" id="s13">
+      <h2 class="section-title"><span class="section-number">13.</span> Valokuvat ja media</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Kuvasuhteet</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Kuvasuhteet – taulukko">
+          <table>
+            <thead><tr><th>Kuvasuhde</th><th>Käyttö</th></tr></thead>
+            <tbody>
+              <tr><td><strong>16:9</strong></td><td>Tiedotteet, uutiset, hero-alueet</td></tr>
+              <tr><td><strong>1:1</strong></td><td>Kuvallinen nosto, kasvokuva, pikkukuva</td></tr>
+              <tr><td><strong>21:9</strong></td><td>Leveä hero-alue</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Alt-tekstit</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Alt-tekstit – taulukko">
+          <table>
+            <thead><tr><th>Kuvatyyppi</th><th>Alt-teksti</th></tr></thead>
+            <tbody>
+              <tr><td>Informatiivinen kuva</td><td>Kuvaa kuvan keskeisen sisällön</td></tr>
+              <tr><td>Kuvituskuva</td><td><code>alt=""</code> — tyhjä</td></tr>
+              <tr><td>Kasvokuva</td><td>Henkilön nimi ja titteli</td></tr>
+              <tr><td>Infografiikka</td><td>Kuvaa data sanallisesti tai linkitä tekstitaulukkoon</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Muut vaatimukset</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Muut vaatimukset – taulukko">
+          <table>
+            <thead><tr><th>Elementti</th><th>Vaatimus</th></tr></thead>
+            <tbody>
+              <tr><td>Kuvateksti</td><td>Esitetään kuvan alla</td></tr>
+              <tr><td>Kuvan tekijänoikeus</td><td>Kuvaaja merkitään muodossa "Kuva: Etunimi Sukunimi / Organisaatio". Kuvaajan tiedot näytetään kuvan päällä tai alla.</td></tr>
+              <tr><td>Videot: tekstitys</td><td>Pakollinen kaikille puhutuille videoille (WCAG 1.2.2)</td></tr>
+              <tr><td>Automaattitoisto äänellä</td><td>Kielletty</td></tr>
+              <tr><td>Karusellit</td><td>Ei automaattista pyöritystä</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HUOMIONAUHA ===== -->
+    <section class="section" id="s14">
+      <h2 class="section-title"><span class="section-number">14.</span> Huomionauhat ja virhesivut</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Huomionauha</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-m)">Huomionauha viestii käyttäjälle tärkeästä tai kriittisestä tiedosta. Vakavuustaso ilmaistaan aina värin, ikonin ja tekstin yhdistelmällä — väri ei yksin riitä. Huomionauha ei varaa tilaa eikä näy ilman aktiivista viestiä.</p>
+
+        <div class="alert alert-info" role="status">
+          <span class="alert-icon"><span class="material-symbols-outlined" style="font-size:20px;color:var(--color-info)">info</span></span>
+          <div class="alert-text"><strong>Tiedotus</strong> Neutraali ilmoitus tai lisätieto. Tausta <code>#E8F0FB</code>.</div>
+        </div>
+        <div class="alert alert-warning" role="status">
+          <span class="alert-icon"><span class="material-symbols-outlined" style="font-size:20px;color:var(--color-warning)">warning</span></span>
+          <div class="alert-text"><strong>Varoitus</strong> Käyttäjän huomio tarvitaan ennen jatkamista. Tausta <code>#FFF3CD</code>.</div>
+        </div>
+        <div class="alert alert-error" role="alert">
+          <span class="alert-icon"><span class="material-symbols-outlined" style="font-size:20px;color:var(--color-error)">error</span></span>
+          <div class="alert-text"><strong>Virhe</strong> Toiminto epäonnistui tai syöte on virheellinen. Tausta <code>#FDECEA</code>.</div>
+        </div>
+        <div class="alert alert-success" role="status">
+          <span class="alert-icon"><span class="material-symbols-outlined" style="font-size:20px;color:var(--color-success)">check_circle</span></span>
+          <div class="alert-text"><strong>Onnistuminen</strong> Toiminto suoritettiin onnistuneesti. Tausta <code>#E6F4EC</code>.</div>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Virhesivut</h3>
+        <div class="subsection--wireframe">
+        <p style="margin-bottom:var(--space-m)">Jokainen virhesivu sisältää virhekoodin, selkeän selityksen sekä toimintaohjeet. Sivulla on aina linkit etusivulle ja hakuun.</p>
+        <div class="error-page-demo" style="max-width:100%">
+          <div class="error-code">404</div>
+          <div class="error-title">Sivua ei löydy</div>
+          <div class="error-desc">Sivu on poistettu tai sen osoite on muuttunut. Tarkista osoite tai palaa etusivulle.</div>
+          <div class="demo-row" style="justify-content:center">
+            <button class="demo-btn btn-primary btn-sm">Etusivulle</button>
+            <button class="demo-btn btn-secondary btn-sm">Haku</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Virhesivut – taulukko">
+          <table>
+            <thead><tr><th>Koodi</th><th>Suomeksi</th><th>Tekninen nimi</th><th>Kuvaus</th></tr></thead>
+            <tbody>
+              <tr><td>400</td><td>Virheellinen pyyntö</td><td>Bad Request</td><td>Virheellinen osoite tai parametri</td></tr>
+              <tr><td>403</td><td>Pääsy kielletty</td><td>Forbidden</td><td>Ei oikeutta sisältöön</td></tr>
+              <tr><td>404</td><td>Sivua ei löydy</td><td>Not Found</td><td>Sivu poistettu tai osoite muuttunut</td></tr>
+              <tr><td>500</td><td>Palvelinvirhe</td><td>Internal Server Error</td><td>Odottamaton palvelinvirhe</td></tr>
+              <tr><td>503</td><td>Palvelu ei saatavilla</td><td>Service Unavailable</td><td>Tilapäinen huoltokatko</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Huoltotila</h3>
+        <p>Huoltotilasta kertova virhesivu toimii myös silloin kun palvelinvirhe estää normaalin sivuston toiminnan. Se toteutetaan <strong>staattisena HTML-tiedostona</strong> palvelinympäristön tasolla, erillään WordPress-kokonaisuudesta. Visuaalisesti sivu noudattaa samaa ilmettä kuin muutkin virhesivut: minimalistinen asettelu, selkeä viesti tilanteesta ja arvioitu palautumisaika mikäli se on tiedossa.</p>
+      </div>
+    </section>
+
+    <!-- ===== HAKUKENTTÄ ===== -->
+    <section class="section" id="s15">
+      <h2 class="section-title"><span class="section-number">15.</span> Hakukenttä</h2>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Hakukenttä</h3>
+        <div class="subsection--wireframe">
+        <form class="search-demo" role="search" action="#">
+          <input class="search-input" type="search" placeholder="Hae sivustolta..." aria-label="Hae sivustolta">
+          <button class="search-btn" type="submit" aria-label="Hae"><span class="material-symbols-outlined" style="font-size:20px;vertical-align:middle">search</span> Hae</button>
+        </form>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Ominaisuudet</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Ominaisuudet – taulukko">
+          <table>
+            <thead><tr><th>Ominaisuus</th><th>Kuvaus</th></tr></thead>
+            <tbody>
+              <tr><td>Elementti</td><td><code>&lt;input type="search"&gt;</code> — mahdollistaa tyhjennyspainiketuen selaimissa</td></tr>
+              <tr><td>Placeholder</td><td>Lyhyt kuvaus haun kohteesta, esim. "Hae sivustolta...". Ei korvaa labelia.</td></tr>
+              <tr><td>Label</td><td>Näkyvä tai <code>sr-only</code>-label pakollinen. Pelkkä placeholder ei riitä.</td></tr>
+              <tr><td>Hakupainike</td><td>Hakuikoni tai teksti "Hae". Minimikoko 44×44 px. <code>aria-label</code> jos pelkkä ikoni.</td></tr>
+              <tr><td>Autocomplete</td><td>Ehdotukset avautuvat kirjoittaessa. Näppäimistökäyttö: ↓/↑ liikkuu ehdotusten välillä, Enter valitsee, Escape sulkee listan.</td></tr>
+              <tr><td>Rooli</td><td>Hakukenttä sijoitetaan <code>&lt;form role="search"&gt;</code> -elementtiin</td></tr>
+              <tr><td>Tyhjentäminen</td><td>Kenttä voidaan tyhjentää näppäimistöllä (Escape) tai erillisellä tyhjennuspainikkeella</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MONIKIELISYYS ===== -->
+    <!-- ===== EVÄSTEBANNERI ===== -->
+    <section class="section" id="s16">
+      <h2 class="section-title"><span class="section-number">16.</span> Evästebanneri</h2>
+
+      <p style="margin-bottom:var(--space-m)">Evästebanneri sijoitetaan sivun yläreunaan ennen headeria — se työntää sisältöä alaspäin eikä asemoidu sisällön päälle. Evästeitä ei tallenneta ennen kuin käyttäjä on tehnyt aktiivisen valinnan.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Evästebanneri</h3>
+        <div class="subsection--wireframe">
+        <div class="cookie-banner-demo" role="region" aria-label="Evästebanneri">
+          <div class="cookie-text">
+            <strong>Käytämme evästeitä</strong><br>
+            Keräämme evästeitä sivuston käytön parantamiseksi. Evästeiden hylkääminen voi rajoittaa tiettyjen toimintojen käyttöä. <a href="#" style="color:var(--color-primary);text-decoration:underline">Lue lisää evästekäytännöistämme</a>.
+          </div>
+          <div class="cookie-actions">
+            <button class="cookie-accept">Hyväksy evästeet</button>
+            <button class="cookie-reject">Hylkää evästeet</button>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Vaatimukset</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Evästebanneri – vaatimukset – taulukko">
+          <table>
+            <thead><tr><th>Vaatimus</th><th>Kuvaus</th></tr></thead>
+            <tbody>
+              <tr><td>Sijoittelu</td><td>Sivun yläreunassa ennen headeria. Ei asemoidu sisällön päälle.</td></tr>
+              <tr><td>Painikkeet</td><td>"Hyväksy"- ja "Hylkää"-painike ovat visuaalisesti tasavertaisia — kumpikaan ei ole korostetumpi. Minimikoko 44×44 px.</td></tr>
+              <tr><td>Sulkeutuminen</td><td>Sulkeutuu kummasta tahansa painikkeesta. Ei näytetä uudelleen saman istunnon aikana.</td></tr>
+              <tr><td>Linkki</td><td>Sisältää linkin evästekäytäntöihin.</td></tr>
+              <tr><td>Saavutettavuus</td><td>Toteutetaan <code>role="region"</code> ja kuvaavalla <code>aria-label</code>illä — ei <code>role="dialog"</code>, koska banneri ei ole modaali eikä lukitse fokusta. Ei estä näppäimistökäyttöä eikä ruudunlukijaa.</td></tr>
+              <tr><td>Kieli</td><td>Selkeää ja ymmärrettävää — ei juridista erikoissanastoa.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TULOSTUSTYYLI ===== -->
+    <section class="section" id="s17">
+      <h2 class="section-title"><span class="section-number">17.</span> Tulostustyyli</h2>
+
+      <p>Tulostusversio optimoidaan automaattisesti selaimen tulostustyylillä (<code>@media print</code>). Erillistä tulostuspainiketta ei tarvita.</p>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Piilotetaan tulostuksessa</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Piilotetaan tulostuksessa – taulukko">
+          <table>
+            <thead><tr><th>Elementti</th></tr></thead>
+            <tbody>
+              <tr><td>Header ja footer</td></tr>
+              <tr><td>Navigaatio</td></tr>
+              <tr><td>Evästebanneri</td></tr>
+              <tr><td>Hakukenttä</td></tr>
+              <tr><td>Sivutuskomponentti</td></tr>
+              <tr><td>Kaikki toimintapainikkeet</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Näytetään tulostuksessa</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Näytetään tulostuksessa – taulukko">
+          <table>
+            <thead><tr><th>Elementti</th><th>Huom.</th></tr></thead>
+            <tbody>
+              <tr><td>Sivun otsikko</td><td></td></tr>
+              <tr><td>Julkaisupäivä ja sisältötyyppi</td><td></td></tr>
+              <tr><td>Leipäteksti, otsikot, kuvat</td><td></td></tr>
+              <tr><td>Linkkien URL-osoitteet</td><td>Vain ulkoiset linkit — sisäiset linkit eivät näy URL:nä</td></tr>
+              <tr><td>Ministeriön nimi ja sivuston osoite</td><td>Sivun alaosassa</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Tulostustypografia</h3>
+        <div class="table-wrap" role="region" tabindex="0" aria-label="Tulostustypografia – taulukko">
+          <table>
+            <thead><tr><th>Ominaisuus</th><th>Arvo</th></tr></thead>
+            <tbody>
+              <tr><td>Fonttikoko</td><td>Vähintään 12 pt</td></tr>
+              <tr><td>Riviväli</td><td>Vähintään 1.5</td></tr>
+              <tr><td>Värit</td><td>Musta teksti valkoisella taustalla — ministeriövärejä ei käytetä</td></tr>
+              <tr><td>Asettelu</td><td>Yksisarakkeinen</td></tr>
+              <tr><td>Sivunumero</td><td>Sivun alaosassa, sisältää tulostuspäivämäärän</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="doc-footer-note">
+      <p>Dokumentin omistaa Valtioneuvoston kanslia, verkkoviestintä. Versiohistoria ja muutosprosessi: ks. <code>design.md</code> §20.</p>
+      <a href="#" class="doc-back-to-top">Takaisin alkuun</a>
+    </div>
+
+  </main>
+  </div><!-- end doc-body -->
+</div><!-- end doc-layout -->
+
+  <script>
+    document.querySelectorAll('.accordion-demo').forEach(function (accordion) {
+      accordion.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var expanded = trigger.getAttribute('aria-expanded') === 'true';
+          var content = document.getElementById(trigger.getAttribute('aria-controls'));
+          var arrow = trigger.querySelector('.accordion-arrow');
+          trigger.setAttribute('aria-expanded', String(!expanded));
+          if (content) content.hidden = expanded;
+          if (arrow) arrow.classList.toggle('open', !expanded);
+        });
+      });
+    });
+
+    // Sidebar scroll-spy: reflect the section actually in view, not a hardcoded default.
+    (function () {
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll('.sidebar-nav a[href^="#"]'));
+      var targets = navLinks
+        .map(function (link) { return document.getElementById(link.getAttribute('href').slice(1)); })
+        .filter(Boolean);
+
+      if (!('IntersectionObserver' in window) || targets.length === 0) return;
+
+      function setActive(id) {
+        navLinks.forEach(function (link) {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+        });
+      }
+
+      var visible = new Set();
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            visible.add(entry.target.id);
+          } else {
+            visible.delete(entry.target.id);
+          }
+        });
+        for (var i = 0; i < targets.length; i++) {
+          if (visible.has(targets[i].id)) {
+            setActive(targets[i].id);
+            break;
+          }
+        }
+      }, { rootMargin: '-10% 0px -75% 0px', threshold: 0 });
+
+      targets.forEach(function (target) { observer.observe(target); });
+    })();
+
+
+
+  </script>
+</body>
+</html>

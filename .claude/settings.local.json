@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(impeccable)",
+      "Bash(node *)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(IMPECCABLE_CRITIQUE_META='{\"target\":\"index.html\",\"total_score\":17,\"p0_count\":2,\"p1_count\":2}' node .claude/skills/impeccable/scripts/critique-storage.mjs write index-html /tmp/critique-index-html-body.md)",
+      "Bash(grep -oE 'style=\"[^\"]*#[0-9A-Fa-f]{3,6}[^\"]*\"' index.html)",
+      "Bash(grep -n \"\\\\.doc-body\\\\|\\\\.sidebar \\\\|\\\\.sidebar{\\\\|\\\\.sidebar,\\\\|\\\\.main-content\\\\|position: fixed\\\\|position:fixed\\\\|overflow-y\\\\|min-width\" assets/design-system.css)",
+      "Bash(grep -n \"\\\\.btn \\\\|\\\\.btn{\\\\|\\\\.btn,\\\\|\\\\.btn-primary\\\\|\\\\.btn-secondary\" assets/design-system.css)",
+      "Bash(awk '/\\\\.btn[ ,{]/{print NR\": \"$0}' assets/design-system.css)",
+      "Bash(awk 'NR>45' assets/design-system.css)",
+      "Bash(grep -noE '#[0-9A-Fa-f]{3,6}')",
+      "Bash(grep -ocE '#[0-9A-Fa-f]{3,6}')",
+      "Bash(awk 'NR>57' assets/design-system.css)",
+      "Bash(grep -oE '#[0-9A-Fa-f]{3,6}')",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 *)",
+      "Bash(IMPECCABLE_CRITIQUE_META='{\"target\":\"index.html\",\"total_score\":26,\"p0_count\":0,\"p1_count\":2}' node .claude/skills/impeccable/scripts/critique-storage.mjs write index-html /tmp/critique-index-html-body-2.md)",
+      "Bash(rm /tmp/critique-index-html-body-2.md)",
+      "Bash(echo \"detect exit:$?\")",
+      "Bash(echo \"index detect exit:$?\")",
+      "Bash(echo \"css detect exit:$?\")",
+      "Bash(echo \"index exit:$?\")",
+      "Bash(echo \"css exit:$?\")",
+      "Bash(IMPECCABLE_CRITIQUE_META='{\"target\":\"index.html\",\"total_score\":34,\"p0_count\":0,\"p1_count\":1}' node .claude/skills/impeccable/scripts/critique-storage.mjs write index-html /tmp/critique-index-html-body-5.md)",
+      "Bash(rm /tmp/critique-index-html-body-5.md)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/skills/impeccable/scripts/hook.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Checking UI changes"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Impeccable design detector: runs after Edit/Write/MultiEdit on UI files and surfaces findings as system reminders."
+}
