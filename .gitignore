@@ -1,0 +1,13 @@
+# Macin järjestelmätiedostot
+.DS_Store
+
+# Claude Code paikallinen konfiguraatio
+.claude/
+
+# Paikallinen hakemisto
+.impeccable/
+
+# Muut paikallisen kehityksen tiedostot
+node_modules/
+.env
+*.log
