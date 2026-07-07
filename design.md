@@ -209,7 +209,7 @@ Valtioneuvoston ja ministeriöiden tunnus (leijonamerkki) toteutetaan SVG-muodos
 
 > **Tunnuksen linjaus (huomioitava ennen toteutusta):** Näkyvän tunnuksen tulee linjautua sisällön vasempaan reunaan (esim. murupolun ja leipätekstin kanssa). Suoja-alue on vähimmäisväljyys tunnuksen ympärillä — ei osa linjausta. Käytä tiukkarajaista SVG-tunnusta ja toteuta suoja-alue CSS:llä; jos tunnusassetissa on valmiiksi läpinäkyvää väljyyttä, se on kompensoitava, ettei tunnus siirry pois linjasta.
 
-> **Tunnostiedostot (huomioitava ennen toteutusta):** Viralliset tunnostiedostot haetaan ministeriöiden graafisista ohjeistoista (kuvapankki, ks. osio 20.7) ja tarkistetaan ennen toteutusta.
+> **Tunnustiedostot (huomioitava ennen toteutusta):** Viralliset tunnustiedostot haetaan ministeriöiden graafisista ohjeistoista (kuvapankki, ks. osio 20.7) ja tarkistetaan ennen toteutusta.
 
 ---
 
@@ -772,7 +772,7 @@ Dokumentti noudattaa semanttista versiointia (semver: `MAJOR.MINOR.PATCH`):
 ## [2.6.0] – 2026-07-07
 ### Lisätty
 - Osio 3.1: Huomio väriarvojen tarkistuksesta ennen toteutusta — dokumentin väriarvot ovat havainnollistavia
-- Osio 3.5: Uusi Tunnukset-osio (suoja-alue, minimikoko, sijoittaminen kuvalle, ministeriötunnukset) sekä toteutushuomiot tunnuksen linjauksesta ja virallisten tunnostiedostojen tarkistuksesta
+- Osio 3.5: Uusi Tunnukset-osio (suoja-alue, minimikoko, sijoittaminen kuvalle, ministeriötunnukset) sekä toteutushuomiot tunnuksen linjauksesta ja virallisten tunnustiedostojen tarkistuksesta
 
 ## [2.5.0] – 2026-07-07
 ### Lisätty
