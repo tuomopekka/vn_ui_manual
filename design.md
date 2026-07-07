@@ -1,7 +1,7 @@
 # DESIGN.MD: Valtioneuvoston ja ministeriöiden design system
 
-**Versio:** 2.4.0
-**Päivitetty:** 2026-05-08
+**Versio:** 2.5.0
+**Päivitetty:** 2026-07-07
 **Tila:** Luonnos
 **Omistaja:** Valtioneuvoston kanslia, verkkoviestintä
 
@@ -159,6 +159,8 @@ Kukin ministeriö käyttää omaa aksenttiväriään, joka ohjataan CSS-muuttuji
 | Leipäteksti | Noto Sans Regular 400 | 16px / 1rem | 16px / 1rem | Ensisijainen lukuteksti |
 | Pieni teksti | Noto Sans Regular 400 | 14px / 0.875rem | 14px / 0.875rem | Päivämäärät, kuvatekstit |
 | UI-teksti | Noto Sans Bold 700 | 16px / 1rem | 16px / 1rem | Navigaatio, painikkeet |
+| Mikroteksti | Noto Sans Regular 400 | 12px / 0.75rem | 12px / 0.75rem | Tagit, sisältötyyppitunnisteet, tiiviit metatiedot |
+| Koodi | Monospace (esim. Courier New) | 14px / 0.875rem | 14px / 0.875rem | Näytettävät koodinpätkät, väri- ja tokenarvot |
 
 #### Pystyvälistykset
 
@@ -167,12 +169,14 @@ Välistykset noudattavat 8 px -pohjaista järjestelmää (ks. osio 3.3). Otsikon
 | Elementti | Väli yläpuolella | Väli alapuolella |
 |---|---|---|
 | H1 | 0 (sivun ensimmäinen elementti) | 24px / `--space-m` |
-| H2 | 48px / 3 × `--space-xs` | 16px / `--space-s` |
+| H2 | 48px / `--space-xl` | 16px / `--space-s` |
 | H3 | 32px / `--space-l` | 8px / `--space-xs` |
 | H4 | 24px / `--space-m` | 8px / `--space-xs` |
 | Ingressi | 0 (seuraa aina H1:tä) | 32px / `--space-l` |
 | Leipäteksti | 0 | 16px / `--space-s` kappaleiden välillä |
 | Pieni teksti | 8px / `--space-xs` | 0 |
+
+### 3.3 Välistykset
 
 Suunnittelussa käytetään 8 px -pohjaista järjestelmää:
 
@@ -182,6 +186,8 @@ Suunnittelussa käytetään 8 px -pohjaista järjestelmää:
 | s | 16px | `--space-s` |
 | m | 24px | `--space-m` |
 | l | 32px | `--space-l` |
+| xl | 48px | `--space-xl` |
+| 2xl | 64px | `--space-2xl` |
 
 ### 3.4 Kulmaviiste
 
@@ -212,7 +218,7 @@ Sivustot noudattavat Mobile First -periaatetta: tyylimääritykset kirjoitetaan 
 ### 4.3 Käyttöperiaatteet
 
 - Maksimileveys on **1280 px** — sisältöalue ei kasva tätä leveämmäksi xl-näytöillä. Taustakuvat, väripalkit ja bannerit voivat ulottua koko näytön leveyteen.
-- Tekstisisältö suositellaan rajattavaksi 8–10 sarakkeeseen luettavuuden varmistamiseksi leveillä näytöillä.
+- Leipäteksti näytetään koko sisältöpalstan levyisenä (maksimileveyteen 1280 px saakka). Erillistä tekstirivin merkkileveyden rajausta ei käytetä.
 - Gridin alasarakkeistus tapahtuu aina täysinä sarakeyksiköinä (esim. 8+4, 4+4+4, 3+9).
 
 ---
@@ -745,6 +751,14 @@ Dokumentti noudattaa semanttista versiointia (semver: `MAJOR.MINOR.PATCH`):
 ### 20.4 Muutoshistoria
 
 ```
+## [2.5.0] – 2026-07-07
+### Lisätty
+- Osio 3.2: Tekstityypit-taulukkoon lisätty Mikroteksti (12px) ja Koodi (monospace) — aiemmin toteutuksessa käytössä, mutta puuttuivat speksistä
+- Osio 3.3: Lisätty puuttunut osio-otsikko "Välistykset" (aiemmin siihen viitattiin ilman että osiota oli olemassa) sekä tokenit xl (48px) ja 2xl (64px)
+### Muutettu
+- Osio 3.2: Korjattu H2:n ylävälin merkintä muotoon `--space-xl` (48px) — aiempi "3 × --space-xs" olisi ollut 24px
+- Osio 4.3: Leipätekstin merkkileveysrajaus poistettu; teksti näytetään koko sisältöpalstan levyisenä
+
 ## [2.4.0] – 2026-05-08
 ### Muutettu
 - Osio 3.2: Otsikkofontti vaihdettu Noto Sans Condensed → Noto Sans Extra Condensed (`font-stretch: extra-condensed`, `wdth: 62.5`)

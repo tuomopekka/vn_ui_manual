@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Design System – Valtioneuvosto ja ministeriöt v2.4.1</title>
+<title>Design System – Valtioneuvosto ja ministeriöt v2.5.0</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wdth,wght@62.5,700;100,300;100,400;100,700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
       <h1>Valtioneuvoston ja sen ministeriöiden visuaalinen ilme verkkoviestinnässä</h1>
       <p class="description">Ohjeisto valtioneuvoston ja ministeriöiden visuaalisen ilmeen käyttöön digitaalisissa palveluissa. Ohjeisto määrittelee reunaehdot, joita suunnittelijat, kehittäjät ja tekoälyagentit noudattavat yhtenäisen ja saavutettavan lopputuloksen varmistamiseksi.</p>
       <div class="meta-row">
-        <div class="meta-item"><strong>v2.4.1</strong> · Päivitetty 2026-05-26</div>
+        <div class="meta-item"><strong>v2.5.0</strong> · Päivitetty 2026-07-07</div>
         <div class="meta-item"><strong>Tekijä:</strong> Valtioneuvoston kanslia / Viestintäosasto</div>
       </div>
     </div>
@@ -660,7 +660,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Header</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
           <div class="nav-demo">
             <img loading="lazy" src="assets/tunnukset/tunnus_vn.png" alt="Valtioneuvosto" style="height:100px;width:auto;display:block;">
             <div class="nav-actions">
@@ -691,7 +691,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Footer</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
           <div class="footer-extra-demo">
             <div class="footer-extra-cols">
               <div class="footer-extra-item">
@@ -800,7 +800,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Ministeriövalikko</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
         <p style="margin-bottom:var(--space-s)">Esimerkki avatusta ministeriövalikosta. Valikko työntää sivun sisältöä alaspäin — se ei avaudu sisällön päälle.</p>
         <nav class="ministerynav-demo" aria-label="Ministeriövalikko">
           <div class="ministerynav-body">
@@ -838,7 +838,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Päänavigaatio</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
         <p style="margin-bottom:var(--space-s)">Esimerkki avatusta päänavigaatiosta. Valikko työntää sivun sisältöä alaspäin — se ei avaudu sisällön päälle.</p>
         <nav class="mainnav-demo" aria-label="Päänavigaatio">
           <div class="nav-demo" style="border-radius:var(--radius) var(--radius) 0 0; margin-bottom:0;">
@@ -889,7 +889,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Apunavigaatio</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
         <p style="margin-bottom:var(--space-s)">Apunavigaatio sijaitsee sisältöalueen vasemmalla puolella. Esimerkki näyttää tyypillisen sisältösivun asettelun.</p>
 
         <div class="page-layout-demo">
@@ -972,7 +972,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Murupolku</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
         <div class="breadcrumb-demo">
           <nav class="breadcrumb" aria-label="Murupolku">
             <a href="#">Etusivu</a>
@@ -1229,12 +1229,12 @@
     <!-- ===== LISTAUKSET ===== -->
     <section class="section" id="s10">
       <h2 class="section-title"><span class="section-number">10.</span> Listaukset</h2>
-      <p>Listaukset näyttävät sisältöä automaattisesti kriteerien perusteella. Käyttäjä voi suodattaa ja sivuttaa tuloksia.</p>
+      <p>Listaukset näyttävät sisältöä automaattisesti tiettyjen kriteerien perusteella. Käyttäjä voi suodattaa ja sivuttaa tuloksia.</p>
 
       <div class="subsection">
         <h3 class="subsection-title">Ruudukkolistaus</h3>
         <div class="subsection--wireframe">
-        <p style="margin-bottom:var(--space-m)">Kortit skaalautuvat 3 → 2 → 1 sarakkeeseen näyttökoosta riippuen. Ainoa klikkausalue on otsikkolinkki.</p>
+        <p style="margin-bottom:var(--space-m)">Kortit skaalautuvat 3 → 2 → 1 sarakkeeseen näyttökoosta riippuen. Otsikkolinkki on ainoa klikattava alue.</p>
         <div class="card-demos">
           <div class="demo-card">
             <div class="card-img">16:9</div>
@@ -1267,7 +1267,7 @@
       <div class="subsection">
         <h3 class="subsection-title">Rivilistaus</h3>
         <div class="subsection--wireframe">
-        <p style="margin-bottom:var(--space-m)">Sisältörivit listataan allekkain. Kuva on 1:1-kuvasuhteella sisällön vasemmalla puolella.</p>
+        <p style="margin-bottom:var(--space-m)">Sisältörivit listataan allekkain. Kuva näytetään 1:1-kuvasuhteella sisällön vasemmalla puolella.</p>
         <div class="list-demo">
           <div class="list-item">
             <div class="list-item-img"></div>
@@ -1554,7 +1554,7 @@
       <div class="subsection">
         <h3 class="subsection-title">Huomionauha</h3>
         <div class="subsection--wireframe">
-        <p style="margin-bottom:var(--space-m)">Huomionauha viestii käyttäjälle tärkeästä tai kriittisestä tiedosta. Vakavuustaso ilmaistaan aina värin, ikonin ja tekstin yhdistelmällä — väri ei yksin riitä. Huomionauha ei varaa tilaa eikä näy ilman aktiivista viestiä.</p>
+        <p style="margin-bottom:var(--space-m)">Huomionauha viestii käyttäjälle tärkeästä tai kriittisestä tiedosta. Vakavuustaso ilmaistaan aina värin, ikonin ja tekstin yhdistelmällä, ei pelkällä värillä. Huomionauha ei varaa tilaa eikä näy ilman aktiivista viestiä.</p>
 
         <div class="alert alert-info" role="status">
           <span class="alert-icon"><span class="material-symbols-outlined" style="font-size:20px;color:var(--color-info)">info</span></span>
@@ -1577,7 +1577,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Virhesivut</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
         <p style="margin-bottom:var(--space-m)">Jokainen virhesivu sisältää virhekoodin, selkeän selityksen sekä toimintaohjeet. Sivulla on aina linkit etusivulle ja hakuun.</p>
         <div class="error-page-demo" style="max-width:100%">
           <div class="error-code">404</div>
@@ -1652,7 +1652,7 @@
 
       <div class="subsection">
         <h3 class="subsection-title">Evästebanneri</h3>
-        <div class="subsection--wireframe">
+        <div class="subsection--wireframe subsection--wireframe--nts">
         <div class="cookie-banner-demo" role="region" aria-label="Evästebanneri">
           <div class="cookie-text">
             <strong>Käytämme evästeitä</strong><br>

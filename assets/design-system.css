@@ -284,7 +284,7 @@
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--color-dark-blue);
     margin-bottom: var(--space-m);
     margin-top: 0;
@@ -313,17 +313,8 @@
     scroll-margin-top: var(--space-l);
   }
 
-  /* Constrain running prose to a readable measure on wide screens
-     (design.md §4.3: rajaa tekstisisältö 8-10 sarakkeeseen leveillä näytöillä).
-     Scoped to direct-child paragraphs only, so wireframe-demo captions and
-     component-internal text (tables, alerts, swatches, forms) stay full-width. */
-  .section > p,
-  .subsection > p {
-    max-width: 75ch;
-  }
-
   .subsection-title {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--color-dark-blue);
     margin-bottom: var(--space-s);
   }
@@ -497,7 +488,7 @@
     padding: 12px 24px;
     font-family: var(--font-body);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
     border-radius: var(--radius);
     border: 2px solid transparent;
     cursor: pointer;
@@ -518,16 +509,18 @@
     border-radius: var(--radius);
     padding: var(--space-s) var(--space-m);
     margin-bottom: var(--space-s);
-    font-size: 0.9rem;
+    font-size: 1rem;
     display: flex;
     gap: var(--space-xs);
     align-items: flex-start;
+    border: 1px solid transparent;
   }
 
-  .alert-info { background: #E8F0FB; }
-  .alert-warning { background: #FFF3CD; }
-  .alert-error { background: #FDECEA; }
-  .alert-success { background: #E6F4EC; }
+  /* Reunavärit design.md §13.1 mukaisesti */
+  .alert-info { background: #E8F0FB; border-color: #2699D6; }
+  .alert-warning { background: #FFF3CD; border-color: #F18700; }
+  .alert-error { background: #FDECEA; border-color: #E63312; }
+  .alert-success { background: #E6F4EC; border-color: #00713A; }
 
   .alert-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
   .alert-text strong { display: block; font-weight: 700; margin-bottom: 2px; }
@@ -792,7 +785,7 @@
     align-items: center;
     padding: 3px 10px;
     border-radius: 4px;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 700;
   }
 
@@ -817,6 +810,12 @@
     .main-content {
       padding: var(--space-m);
     }
+
+    /* Otsikoiden mobiilikoot (design.md §3.2) */
+    h1 { font-size: 2rem; }
+    h2, .section-title { font-size: 1.75rem; }
+    h3, .subsection-title { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
 
     .sidebar {
       display: none;
@@ -851,7 +850,7 @@
   @media print {
     @page { size: A4; margin: 18mm 16mm 18mm 16mm; }
     @page :first { margin-top: 12mm; }
-    body { background: var(--color-white); color: #000; font-size: 9.5pt; line-height: 1.4; }
+    body { background: var(--color-white); color: #000; font-size: 12pt; line-height: 1.5; }
     .doc-layout { display: block; }
     .sidebar { display: none; }
     .main-content { padding: 0; max-width: 100%; }
@@ -860,7 +859,7 @@
     .meta-badges { display: none; }
     .section-title { color: #000; font-size: 14pt; margin-top: 0; page-break-after: avoid; }
     .section-title::after { background: var(--color-primary); }
-    .subsection-title { color: var(--color-dark-blue); font-size: 10.5pt; page-break-after: avoid; }
+    .subsection-title { color: var(--color-dark-blue); font-size: 13pt; page-break-after: avoid; }
     h4 { page-break-after: avoid; }
     .section { page-break-before: always; padding-top: 0; }
     .section:first-of-type { page-break-before: avoid; }
@@ -986,6 +985,12 @@
   }
 
   .subsection--wireframe .subsection-title { margin-top: 0; }
+
+  /* Koko sivun sommittelu-hahmotelmat ovat pienoismalleja — merkitään ettei
+     niiden tekstikokoja tule mitata speksin arvoina (komponenttidemot ovat 1:1). */
+  .subsection--wireframe--nts::before {
+    content: 'Visuaalinen hahmotelma · ei mittakaavassa';
+  }
 
   /* ===== UTILITIES ===== */
   ul.styled, ol.styled {
@@ -1139,7 +1144,7 @@
   .list-item-title {
     font-family: var(--font-heading);
     font-stretch: var(--font-heading-stretch);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-dark-blue);
     line-height: 1.2;
@@ -1179,7 +1184,7 @@
 
   .card-body { padding: var(--space-s); }
   .card-tag { margin-bottom: 6px; }
-  .card-title { font-family: var(--font-heading); font-stretch: var(--font-heading-stretch); font-size: 1.1rem; font-weight: 700; color: var(--color-dark-blue); margin-bottom: 4px; line-height: 1.2; }
+  .card-title { font-family: var(--font-heading); font-stretch: var(--font-heading-stretch); font-size: 1.5rem; font-weight: 700; color: var(--color-dark-blue); margin-bottom: 4px; line-height: 1.2; }
   .card-meta { font-size: 0.875rem; color: var(--color-gray-cool); }
 
   /* Nav demo */
