@@ -1,6 +1,6 @@
 # DESIGN.MD: Valtioneuvoston ja ministeriöiden design system
 
-**Versio:** 2.5.0
+**Versio:** 2.6.0
 **Päivitetty:** 2026-07-07
 **Tila:** Luonnos
 **Omistaja:** Valtioneuvoston kanslia, verkkoviestintä
@@ -81,6 +81,8 @@ Elementit, jotka avautuvat automaattisesti tai vaativat käyttäjän toimintaa �
 ### 3.1 Väripaletti
 
 Värijärjestelmä perustuu valtioneuvoston viralliseen graafiseen ohjeistukseen.
+
+> **Väriarvojen tarkistus (huomioitava ennen toteutusta):** Tässä dokumentissa esitetyt väriarvot ovat havainnollistavia. Tarkat arvot ja niiden saavutettavuus (kontrastisuhteet) on tarkistettava valtioneuvoston ja ministeriöiden virallisista graafisista ohjeistoista ennen tuotantototeutusta.
 
 #### 3.1.1 Päävärit
 
@@ -192,6 +194,22 @@ Suunnittelussa käytetään 8 px -pohjaista järjestelmää:
 ### 3.4 Kulmaviiste
 
 Kaikissa elementeissä käytetään kevyttä kulmaviistettä yhtenäisen ja pehmeän ilmeen varmistamiseksi. Oletusarvo on `border-radius: 5px`. Tätä käytetään painikkeissa, korteissa, lomake-elementeissä, tageissa, huomionauhassa ja muissa vastaavissa elementeissä.
+
+### 3.5 Tunnukset
+
+Valtioneuvoston ja ministeriöiden tunnus (leijonamerkki) toteutetaan SVG-muodossa skaalautuvuuden varmistamiseksi (ks. osio 5.1).
+
+**Suoja-alue:** Tunnuksen ympärillä on suoja-alue, joka osoittaa vähimmäisetäisyyden muihin graafisiin elementteihin tai näkymän reunoihin. Suoja-alueen leveys on sama kuin leijonamerkissä oleva etäisyys miekan kannasta kruunun keskiosan huippuun.
+
+**Minimikoko:** Sähköisessä käytössä tekstilogon kirjainkorkeus on vähintään 9 pikseliä.
+
+**Tunnuksen sijoittaminen kuvalle:** Kun tunnus sijoittuu kuvan tai väripinnan päälle, on varmistettava riittävä tummuusero taustaan.
+
+**Ministeriöiden tunnukset:** Kukin ministeriö käyttää omaa tunnustaan, jossa leijonamerkki on yhdistetty ministeriön nimeen. Tunnukset noudattavat samoja suoja-alue- ja minimikokosääntöjä kuin valtioneuvoston tunnus.
+
+> **Tunnuksen linjaus (huomioitava ennen toteutusta):** Näkyvän tunnuksen tulee linjautua sisällön vasempaan reunaan (esim. murupolun ja leipätekstin kanssa). Suoja-alue on vähimmäisväljyys tunnuksen ympärillä — ei osa linjausta. Käytä tiukkarajaista SVG-tunnusta ja toteuta suoja-alue CSS:llä; jos tunnusassetissa on valmiiksi läpinäkyvää väljyyttä, se on kompensoitava, ettei tunnus siirry pois linjasta.
+
+> **Tunnostiedostot (huomioitava ennen toteutusta):** Viralliset tunnostiedostot haetaan ministeriöiden graafisista ohjeistoista (kuvapankki, ks. osio 20.7) ja tarkistetaan ennen toteutusta.
 
 ---
 
@@ -751,6 +769,11 @@ Dokumentti noudattaa semanttista versiointia (semver: `MAJOR.MINOR.PATCH`):
 ### 20.4 Muutoshistoria
 
 ```
+## [2.6.0] – 2026-07-07
+### Lisätty
+- Osio 3.1: Huomio väriarvojen tarkistuksesta ennen toteutusta — dokumentin väriarvot ovat havainnollistavia
+- Osio 3.5: Uusi Tunnukset-osio (suoja-alue, minimikoko, sijoittaminen kuvalle, ministeriötunnukset) sekä toteutushuomiot tunnuksen linjauksesta ja virallisten tunnostiedostojen tarkistuksesta
+
 ## [2.5.0] – 2026-07-07
 ### Lisätty
 - Osio 3.2: Tekstityypit-taulukkoon lisätty Mikroteksti (12px) ja Koodi (monospace) — aiemmin toteutuksessa käytössä, mutta puuttuivat speksistä

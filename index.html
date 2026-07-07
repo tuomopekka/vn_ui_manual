@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Design System – Valtioneuvosto ja ministeriöt v2.5.0</title>
+<title>Design System – Valtioneuvosto ja ministeriöt v2.6.0</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wdth,wght@62.5,700;100,300;100,400;100,700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
       <h1>Valtioneuvoston ja sen ministeriöiden visuaalinen ilme verkkoviestinnässä</h1>
       <p class="description">Ohjeisto valtioneuvoston ja ministeriöiden visuaalisen ilmeen käyttöön digitaalisissa palveluissa. Ohjeisto määrittelee reunaehdot, joita suunnittelijat, kehittäjät ja tekoälyagentit noudattavat yhtenäisen ja saavutettavan lopputuloksen varmistamiseksi.</p>
       <div class="meta-row">
-        <div class="meta-item"><strong>v2.5.0</strong> · Päivitetty 2026-07-07</div>
+        <div class="meta-item"><strong>v2.6.0</strong> · Päivitetty 2026-07-07</div>
         <div class="meta-item"><strong>Tekijä:</strong> Valtioneuvoston kanslia / Viestintäosasto</div>
       </div>
     </div>
@@ -169,6 +169,13 @@
       <div class="subsection" id="s3-colors-sub">
         <h3 class="subsection-title">Väripaletti</h3>
         <p>Väripaletti jakautuu kolmeen ryhmään: päävärit, tukivärit ja taustavärit.</p>
+        <div class="spec-note">
+          <span class="material-symbols-outlined" aria-hidden="true">info</span>
+          <div>
+            <span class="spec-note-title">Huomioitava ennen toteutusta</span>
+            Väriarvot ovat havainnollistavia. Tarkista tarkat arvot ja niiden saavutettavuus (kontrastisuhteet) valtioneuvoston ja ministeriöiden virallisista graafisista ohjeistoista ennen tuotantototeutusta.
+          </div>
+        </div>
       </div>
 
       <div class="subsection">
@@ -225,7 +232,6 @@
       <div class="subsection">
         <h3 class="subsection-title">Ministeriöiden dynaamiset värit</h3>
         <p>Värisävyt alla ovat havainnollistavia ja ylläpidetään käsin tämän dokumentin <code>design.md</code>-lähteen mukaisina. Tuotantototeutuksessa väriteemat ajetaan aina dynaamisina CSS-muuttujina (ks. design.md §17), ei kiinteinä heksoina.</p>
-
 
         <div class="ministry-block">
           <h4 class="ministry-block-title">Valtioneuvoston kanslia</h4>
@@ -562,6 +568,13 @@
       <div class="subsection">
         <h3 class="subsection-title">Suoja-alue</h3>
         <p>Tunnuksen ympärillä on suoja-alue, joka osoittaa vähimmäisetäisyyden muihin graafisiin elementteihin tai näkymän reunoihin. Suoja-alueen leveys on sama kuin leijonamerkissä oleva etäisyys miekan kannasta kruunun keskiosan huippuun.</p>
+        <div class="spec-note">
+          <span class="material-symbols-outlined" aria-hidden="true">info</span>
+          <div>
+            <span class="spec-note-title">Huomioitava ennen toteutusta</span>
+            Näkyvän tunnuksen tulee linjautua sisällön vasempaan reunaan (esim. murupolun ja leipätekstin kanssa). Suoja-alue on vähimmäisväljyys tunnuksen ympärillä — ei osa linjausta. Käytä tiukkarajaista SVG-tunnusta ja toteuta suoja-alue CSS:llä; jos tunnusassetissa on valmiiksi läpinäkyvää väljyyttä, se on kompensoitava, ettei tunnus siirry pois linjasta.
+          </div>
+        </div>
       </div>
 
       <div class="subsection">
@@ -577,6 +590,13 @@
       <div class="subsection">
         <h3 class="subsection-title">Ministeriöiden tunnukset</h3>
         <p>Kukin ministeriö käyttää omaa tunnustaan, jossa leijonamerkki on yhdistetty ministeriön nimeen. Tunnukset noudattavat samoja suoja-alue- ja minimikokosääntöjä kuin valtioneuvoston tunnus.</p>
+        <div class="spec-note">
+          <span class="material-symbols-outlined" aria-hidden="true">info</span>
+          <div>
+            <span class="spec-note-title">Huomioitava ennen toteutusta</span>
+            Alla olevat tunnukset ovat havainnollistavia. Hae viralliset tunnostiedostot ministeriöiden graafisista ohjeistoista (kuvapankki, ks. design.md §20.7) ja tarkista ne ennen toteutusta.
+          </div>
+        </div>
         <div class="logo-grid">
           <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_vnk.png" alt="Valtioneuvoston kanslia" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Valtioneuvoston kanslia</div></div>
           <div class="logo-card"><div class="logo-card-preview dark"><img loading="lazy" src="assets/tunnukset/tunnus_um.png" alt="Ulkoministeriö" style="max-height:130px;max-width:100%;object-fit:contain;"></div><div class="logo-card-label">Ulkoministeriö</div></div>
